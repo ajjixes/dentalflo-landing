@@ -2,10 +2,10 @@ import { cn } from "@/lib/utils"
 import { AnimatedShinyText } from "@/components/magicui/animated-shiny-text";
 import { Button } from "@/components/ui/button";
 import { Iphone15Pro } from "@/components/magicui/iphone-15-pro";
-
+import { Ripple } from "@/components/magicui/ripple";
 const Hero = () => {
     return (
-        <div className="min-h-screen  flex flex-col items-center justify-center pt-40 p-6 overflow-hidden">
+        <div className="flex flex-col items-center justify-center pt-40 p-6  ">
             <div className="z-10 flex items-center justify-center mb-2">
                 <div
                     className={cn(
@@ -19,19 +19,20 @@ const Hero = () => {
                 </div>
             </div>
 
-            <div className="text-2xl md:text-4xl lg:text-5xl max-w-5xl text-center">
-                Book Appointments Around the Clock with AI-Powered Assistants
+            <div className="text-3xl md:text-4xl lg:text-5xl max-w-4xl text-center">
+                Never Miss a Call Again. Meet Your 24/7 AI Receptionist.
             </div>
-            <div className="text-sm md:text-lg max-w-3xl text-center mt-4">From Inquiry to Calendar Booking in Seconds with AI Automation Voice and SMS for seamless real-time calendar integration.</div>
+            <div className="text-sm md:text-lg max-w-3xl text-center mt-4 opacity-70">From Inquiry to Calendar Booking in Seconds with AI Automation Voice and SMS for seamless real-time calendar integration.</div>
             <div className="flex gap-3 mt-10">
                 <Button variant="outline" size="lg" className="rounded-full">Get Started</Button>
                 <Button size="lg" className="rounded-full">View Demo</Button>
             </div>
 
-            <div className="relative max-h-[35rem] overflow-hidden">
-                <span className="absolute bottom-0 bg-linear-to-b from-transparent to-white h-[10rem] w-full"></span>
-                <Iphone15Pro className="mt-10 w-full h-full" />
+            <div className="relative flex justify-center max-h-[35rem] overflow-y-hidden w-full ">
+                <span className="absolute bottom-0 z-20 bg-linear-to-b from-transparent to-white h-[10rem] w-full"></span>
+                <Iphone15Pro className="mt-10 w-full z-10" />
             </div>
+            
         </div>
     )
 }
