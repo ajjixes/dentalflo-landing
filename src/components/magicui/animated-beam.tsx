@@ -110,9 +110,12 @@ export const AnimatedBeam: React.FC<AnimatedBeamProps> = ({
     // Initialize ResizeObserver
     const resizeObserver = new ResizeObserver((entries) => {
       // For all entries, recalculate the path
+      
+      /* eslint-disable */
       for (let entry of entries) {
         updatePath();
       }
+      /* eslint-enable */
     });
 
     // Observe the container element

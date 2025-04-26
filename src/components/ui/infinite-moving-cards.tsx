@@ -8,7 +8,6 @@ export const InfiniteMovingCards = ({
     items,
     direction = "left",
     speed = "fast",
-    pauseOnHover = true,
     className,
 }: {
     items: {
@@ -24,8 +23,14 @@ export const InfiniteMovingCards = ({
     const scrollerRef = React.useRef<HTMLUListElement>(null);
 
     useEffect(() => {
-        addAnimation();
+        const handleAnimation = () => {
+            addAnimation();
+        };
+        
+        handleAnimation();
+        // Empty dependency array ensures this only runs once on mount
     }, []);
+
     const [start, setStart] = useState(false);
     function addAnimation() {
         if (containerRef.current && scrollerRef.current) {
@@ -93,7 +98,7 @@ export const InfiniteMovingCards = ({
                 {items.map((item, idx) => (
                     <li
                         className="h-12 flex items-center justify-center"
-                        key={item.name}
+                        key={idx}
                     >
                         <Image src={item.image} alt={item.name} width={100} height={100} />
                     </li>

@@ -1,5 +1,4 @@
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
-import Image from "next/image";
 const Partners = () => {
     return (
         <div>
