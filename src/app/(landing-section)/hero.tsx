@@ -2,7 +2,8 @@ import { cn } from "@/lib/utils"
 import { AnimatedShinyText } from "@/components/magicui/animated-shiny-text";
 import { Button } from "@/components/ui/button";
 import { Iphone15Pro } from "@/components/magicui/iphone-15-pro";
-import { Ripple } from "@/components/magicui/ripple";
+
+
 const Hero = () => {
     return (
         <div className="flex flex-col items-center justify-center pt-40 p-6  ">

@@ -2,7 +2,7 @@ import Navbar from "@/components/navbar";
 import Hero from "./(landing-section)/hero";
 import { Ripple } from "@/components/magicui/ripple";
 import Partners from "./(landing-section)/partners";
-import { ImportantFeatures } from "./(landing-section)/important-features";
+import { ImportantFeatures } from "./(landing-section)/important-feature/important-features";
 export default function Home() {
 
   return (

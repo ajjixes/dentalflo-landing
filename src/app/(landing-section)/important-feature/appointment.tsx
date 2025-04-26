@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 import { AnimatedBeam } from "@/components/magicui/animated-beam";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import Image from "next/image";
+
 const Content = forwardRef<
     HTMLDivElement,
     { className?: string; children?: React.ReactNode }
@@ -25,7 +26,7 @@ const Content = forwardRef<
 
 Content.displayName = "Content";
 
-export function AnimatedBeamDemo() {
+export function Appointment() {
     const containerRef = useRef<HTMLDivElement>(null);
     const div1Ref = useRef<HTMLDivElement>(null);
     const div2Ref = useRef<HTMLDivElement>(null);

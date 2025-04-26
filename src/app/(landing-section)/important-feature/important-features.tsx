@@ -1,4 +1,6 @@
-import { AnimatedBeamDemo } from "./example";
+import { Appointment } from "./appointment";
+import { Reminder } from "./reminder-assistant";
+import LeadNurturing from "./lead-nurturing";
 export const ImportantFeatures = () => {
     return (
         <div className="flex flex-col items-center justify-center py-40 max-w-7xl mx-auto p-6">
@@ -11,18 +13,28 @@ export const ImportantFeatures = () => {
 
                 <div className="border p-4 md:p-6 rounded-lg">
                     <div className=" h-[15rem]">
-                        <AnimatedBeamDemo />
+                        <Appointment />
                     </div>
                     <div className="text-2xl mt-4 mb-2">Appointment Booking Assistant</div>
                     <p className="text-sm text-muted-foreground">Automates 24/7 appointment scheduling via voice and SMS, syncing with your clinic’s calendar for real-time booking and confirmations.</p>
                 </div>
 
                 <div className="border p-4 md:p-6 rounded-lg">
-                    <div className=" h-[15rem]">
-                        <AnimatedBeamDemo />
+                    <div className="relative overflow-hidden h-[15rem]">
+                        <Reminder />
+
+                        <div className="absolute bottom-0 bg-gradient-to-b from-transparent to-background h-10 w-full"></div>
                     </div>
-                    <div className="text-2xl mt-4 mb-2">Appointment Booking Assistant</div>
-                    <p className="text-sm text-muted-foreground">Automates 24/7 appointment scheduling via voice and SMS, syncing with your clinic’s calendar for real-time booking and confirmations.</p>
+                    <div className="text-2xl mt-4 mb-2">Follow-Up & Reminder Assistant</div>
+                    <p className="text-sm text-muted-foreground">Sends automated appointment reminders and post-visit follow-ups, reducing no-shows and enhancing patient engagement.</p>
+                </div>
+
+                <div className="border p-4 md:p-6 rounded-lg">
+                    <div className=" h-[15rem]">
+                        <LeadNurturing />
+                    </div>
+                    <div className="text-2xl mt-4 mb-2">Lead Nurturing <br /> Assistant</div>
+                    <p className="text-sm text-muted-foreground">Instantly responds to leads, nurturing them through personalized messages to convert inquiries into booked appointments.</p>
                 </div>
             </div>
         </div>
