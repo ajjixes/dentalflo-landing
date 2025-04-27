@@ -3,7 +3,7 @@ const Partners = () => {
     return (
         <div>
             <div className="text-center text-sm opacity-70">Trusted by Over 1,000+ Clients Worldwide</div>
-            <div className="rounded-md flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
+            <div className="rounded-md flex flex-col antialiased  dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
                 <InfiniteMovingCards
                     items={partners}
                     direction="right"

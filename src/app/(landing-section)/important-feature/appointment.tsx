@@ -15,7 +15,7 @@ const Content = forwardRef<
         <div
             ref={ref}
             className={cn(
-                "z-10 flex items-center justify-center p-2 border-2 bg-white ",
+                "z-10 flex items-center justify-center p-2 border bg-muted ",
                 className,
             )}
         >

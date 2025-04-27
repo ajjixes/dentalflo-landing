@@ -12,7 +12,8 @@ import {
     MobileNavMenu,
 } from "@/components/ui/resizable-navbar"
 import { useState } from "react"
-
+import { ModeToggle } from "@/components/mode-toggle"
+import { Button } from "@/components/ui/button"
 export default function Navbar() {
     const navItems = [
         {
@@ -39,7 +40,8 @@ export default function Navbar() {
                     <NavbarLogo />
                     <NavItems items={navItems} />
                     <div className="flex items-center gap-4">
-                        <NavbarButton variant="primary">Book a call</NavbarButton>
+                        <ModeToggle />
+                        <Button className="relative  hover:-translate-y-0.5 transition duration-20" variant="default">Book a call</Button>
                     </div>
                 </NavBody>
 
@@ -61,8 +63,9 @@ export default function Navbar() {
                                 <span className="block">{item.name}</span>
                             </a>
                         ))}
-                        <div className="flex w-full flex-col gap-4">
-                            <NavbarButton onClick={() => setIsMobileMenuOpen(false)} variant="primary" className="w-full">
+                        <div className="flex w-full gap-4">
+                            <ModeToggle />
+                            <NavbarButton onClick={() => setIsMobileMenuOpen(false)} variant="primary" className=" w-full">
                                 Book a call
                             </NavbarButton>
                         </div>

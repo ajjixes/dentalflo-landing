@@ -33,7 +33,7 @@ export const Ripple = React.memo(function Ripple({
         return (
           <div
             key={i}
-            className={`absolute animate-ripple rounded-full border bg-foreground/25 shadow-xl`}
+            className={`absolute animate-ripple rounded-full border bg-primary shadow-xl`}
             style={
               {
                 "--i": i,
@@ -43,7 +43,7 @@ export const Ripple = React.memo(function Ripple({
                 animationDelay,
                 borderStyle,
                 borderWidth: "1px",
-                borderColor: `hsl(var(--foreground), ${borderOpacity / 100})`,
+                borderColor: `hsl(var(--primary), ${borderOpacity / 100})`,
                 top: "50%",
                 left: "50%",
                 transform: "translate(-50%, -50%) scale(1)",
