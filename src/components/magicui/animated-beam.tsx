@@ -12,7 +12,10 @@ export interface AnimatedBeamProps {
   toRef: RefObject<HTMLElement | null>;
   curvature?: number;
   reverse?: boolean;
-  pathColor?: string;
+  pathColor?: {
+    light: string;
+    dark: string;
+  };
   pathWidth?: number;
   pathOpacity?: number;
   gradientStartColor?: string;
@@ -35,11 +38,14 @@ export const AnimatedBeam: React.FC<AnimatedBeamProps> = ({
   reverse = false, // Include the reverse prop
   duration = Math.random() * 3 + 4,
   delay = 0,
-  pathColor = "gray",
+  pathColor = {
+    light: "#DFDFDF",
+    dark: "#282D39"
+  },
   pathWidth = 2,
-  pathOpacity = 0.2,
-  gradientStartColor = "#ffaa40",
-  gradientStopColor = "#9c40ff",
+  pathOpacity = 1,
+  gradientStartColor = "#537BEA",
+  gradientStopColor = "#537BEA",
   startXOffset = 0,
   startYOffset = 0,
   endXOffset = 0,
@@ -155,7 +161,8 @@ export const AnimatedBeam: React.FC<AnimatedBeamProps> = ({
     >
       <path
         d={pathD}
-        stroke={pathColor}
+        stroke={pathColor.light}
+        className="dark:stroke-[#282D39]"
         strokeWidth={pathWidth}
         strokeOpacity={pathOpacity}
         strokeLinecap="round"

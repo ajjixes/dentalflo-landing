@@ -10,7 +10,7 @@ const Hero = () => {
             <div className="z-10 flex items-center justify-center mb-4">
                 <div
                     className={cn(
-                        "bg-muted rounded-full border",
+                        "rounded-full border",
                     )}
                 >
                     <AnimatedShinyText className="inline-flex items-center justify-center px-4 py-1 transition ease-out ">

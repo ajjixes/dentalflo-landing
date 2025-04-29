@@ -2,8 +2,12 @@ import Navbar from "@/components/navbar";
 import Hero from "./(landing-section)/hero";
 import { Ripple } from "@/components/magicui/ripple";
 import Partners from "./(landing-section)/partners";
-import { ImportantFeatures } from "./(landing-section)/important-feature/important-features";
 import Steps from "./(landing-section)/steps";
+import Feature from "./(landing-section)/feature";
+import Benefit from "./(landing-section)/benefit";
+import Leader from "./(landing-section)/leader";
+import Contact from "./(landing-section)/contact";
+import Footer from "@/components/footer";
 
 export default function Home() {
 
@@ -23,8 +27,13 @@ export default function Home() {
       </div>
 
       <Partners />
-      <ImportantFeatures />
+      {/* <ImportantFeatures /> */}
+      <Feature />
+      <Benefit />
+      <Leader />
       <Steps />
+      <Contact />
+      <Footer />
     </div>
   );
 }

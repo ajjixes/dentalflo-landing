@@ -21,11 +21,15 @@ export default function Navbar() {
             link: "#features",
         },
         {
-            name: "Pricing",
-            link: "#pricing",
+            name: "Documentation",
+            link: "#documentation",
         },
         {
-            name: "Contact",
+            name: "FAQ",
+            link: "#faq",
+        },
+        {
+            name: "Contact Us",
             link: "#contact",
         },
     ]
