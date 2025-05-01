@@ -1,9 +1,8 @@
 
-import Image from 'next/image'
 const Feature4 = () => {
     return (
         <div className='flex relative justify-center w-full overflow-hidden max-w-5xl mx-auto'>
-            <svg className='w-full' viewBox="0 0 1026 472" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg className='w-full' viewBox="0 0 1026 492" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clipPath="url(#clip0_544_1233)">
                     <rect className='fill-muted' width="1024" height="56" transform="translate(1 1)" />
                     <path fillRule="evenodd" clipRule="evenodd" d="M31 35C34.3137 35 37 32.3137 37 29C37 25.6863 34.3137 23 31 23C27.6863 23 25 25.6863 25 29C25 32.3137 27.6863 35 31 35Z" fill="#ED6A5E" />
@@ -24,10 +23,10 @@ const Feature4 = () => {
                     <path d="M991 22.25C991.199 22.25 991.39 22.3291 991.53 22.4697C991.671 22.6104 991.75 22.8011 991.75 23V28.25H997C997.199 28.25 997.39 28.3291 997.53 28.4697C997.671 28.6104 997.75 28.8011 997.75 29C997.75 29.1989 997.671 29.3896 997.53 29.5303C997.39 29.6709 997.199 29.75 997 29.75H991.75V35C991.75 35.1989 991.671 35.3896 991.53 35.5303C991.39 35.6709 991.199 35.75 991 35.75C990.801 35.75 990.61 35.6709 990.47 35.5303C990.329 35.3896 990.25 35.1989 990.25 35V29.75H985C984.801 29.75 984.61 29.6709 984.47 29.5303C984.329 29.3896 984.25 29.1989 984.25 29C984.25 28.8011 984.329 28.6104 984.47 28.4697C984.61 28.3291 984.801 28.25 985 28.25H990.25V23C990.25 22.8011 990.329 22.6104 990.47 22.4697C990.61 22.3291 990.801 22.25 991 22.25Z" fill="currentColor" fillOpacity="0.5" />
                     <rect className='fill-currentColor dark:fill-dark-primary' x="1" y="57" width="1024" height="606" />
                 </g>
-                <rect x="1" y="1" width="1024" height="470" rx="16" stroke="black" strokeOpacity="0.1" />
+                <rect x="1" y="1" width="1024" height="490" rx="16" stroke="black" strokeOpacity="0.1" />
                 <defs>
                     <clipPath id="clip0_544_1233">
-                        <rect x="1" y="1" width="1024" height="470" rx="16" fill="currentColor" />
+                        <rect x="1" y="1" width="1024" height="490" rx="16" fill="currentColor" />
                     </clipPath>
                     <clipPath id="clip1_544_1233">
                         <rect width="16" height="16" fill="currentColor" transform="translate(729 21)" />
@@ -43,8 +42,8 @@ const Feature4 = () => {
                 </div>
             </div> */}
 
-            <div className="absolute bottom-4 right-5">
-                <svg className='w-[6rem] md:w-[15rem] ' viewBox="0 0 165 246" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <div className="absolute  bottom-2 md:bottom-4 right-2  md:right-5">
+                <svg className='w-[5rem] md:w-[15rem] ' viewBox="0 0 165 246" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                         className="fill-white dark:fill-muted stroke-border"
                         d="M0 7.99999C0 3.58172 3.58172 0 8 0H157C161.418 0 165 3.58172 165 8V207C165 211.418 161.418 215 157 215H8C3.58172 215 0 211.418 0 207V7.99999Z"

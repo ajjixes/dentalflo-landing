@@ -4,6 +4,7 @@ import { AnimatedBeam } from "@/components/magicui/animated-beam";
 import { Globe, ListPlus } from "lucide-react"
 import React, { useRef } from "react";
 import Image from "next/image";
+import { DotPattern } from "@/components/magicui/dot-pattern";
 
 
 const Feature5 = () => {
@@ -18,7 +19,11 @@ const Feature5 = () => {
 
     const leadCaptureRef = useRef<HTMLDivElement>(null);
     return (
-        <div className="flex items-center flex-col relative" ref={leadCaptureContainerRef}>
+        <div className="flex items-center flex-col relative p-4 md:p-6" ref={leadCaptureContainerRef}>
+            <DotPattern
+                glow={true}
+                className="[mask-image:radial-gradient(250px_circle_at_center,white,transparent)]"
+            />
             <div className="flex w-full justify-between">
                 <div className="z-10 h-16 aspect-square bg-muted border rounded-lg p-4" ref={FacebookRef}>
                     <Image src="/social/facebook.svg" className="w-full" alt="Facebook" width={24} height={24} />
