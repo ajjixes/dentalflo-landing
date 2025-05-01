@@ -10,7 +10,7 @@ const Feature1 = () => {
             </div>
 
             <div className="absolute z-0 -bottom-10 md:-bottom-8 -right-4 md:-right-8">
-                <svg className="h-[12rem] md:h-[20rem] lg:h-[14rem] xl:h-[16rem] w-[20rem] md:w-[40rem] lg:w-[30rem] xl:w-[520px]" width="520" height="442" viewBox="0 0 960 442" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg className="h-[12rem] md:h-[20rem] lg:h-[14rem] xl:h-[16rem] w-[20rem] md:w-[40rem] lg:w-[30rem] xl:w-[590px]" width="520" height="442" viewBox="0 0 960 442" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clipPath="url(#clip0_448_155)">
                         <circle className="stroke-accent" cx="383.5" cy="541.5" r="369.5" strokeWidth="2" />
                         <circle className="stroke-accent" cx="754" cy="454" r="453" strokeWidth="2" />
@@ -85,8 +85,6 @@ const Feature1 = () => {
                         </clipPath>
                     </defs>
                 </svg>
-
-
             </div>
         </>
     )
