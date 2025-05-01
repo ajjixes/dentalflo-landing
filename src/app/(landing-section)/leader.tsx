@@ -62,24 +62,24 @@ const Leader = () => {
                 </div>
 
                 <div className="mt-16 relative flex flex-col items-center justify-center min-h-[500px] w-full overflow-hidden rounded-lg border border-white/10 bg-dark-primary p-4 lg:p-10" ref={containerRef}>
-                    <MagicCard className="bg-dark-primary z-20 rounded-xl relative">
-                        <div className="grid grid-cols-2 md:grid-cols-4 items-center justify-center" ref={partnersRef}>
-                            <div className="border-b md:border-b-0 border-r border-white/10 h-full flex justify-center items-center p-4" ref={corePracticeRef}>
+                    <MagicCard className="bg-dark-primary z-20 rounded-xl relative w-full max-w-3xl">
+                        <div className="grid grid-cols-2 md:grid-cols-4 items-center justify-center w-full" ref={partnersRef}>
+                            <div className="border-b md:border-b-0 border-r border-white/10 h-full flex justify-center items-center p-4 w-full" ref={corePracticeRef}>
                                 <div className="h-10 md:h-[2.2rem] flex items-center justify-center">
                                     <Image src="/partner-logo/CorePractice.svg" alt="Dental4Web" className="h-full w-full" width={100} height={100} />
                                 </div>
                             </div>
-                            <div className="border-b md:border-b-0 md:border-r border-white/10 h-full flex justify-center items-center p-4" ref={dental4WebRef}>
+                            <div className="border-b md:border-b-0 md:border-r border-white/10 h-full flex justify-center items-center p-4 w-full" ref={dental4WebRef}>
                                 <div className="h-10 md:h-[2.2rem] flex items-center justify-center">
                                     <Image src="/partner-logo/Dental4Web.svg" alt="Dental4Web" className="h-full w-full" width={100} height={100} />
                                 </div>
                             </div>
-                            <div className="border-r border-white/10 h-full flex justify-center items-center p-4" ref={dentallyRef}>
+                            <div className="border-r border-white/10 h-full flex justify-center items-center p-4 w-full" ref={dentallyRef}>
                                 <div className="h-10 md:h-[2.2rem] flex items-center justify-center">
                                     <Image src="/partner-logo/Dentally.svg" alt="Dentally" className="h-full w-full" width={100} height={100} />
                                 </div>
                             </div>
-                            <div className=" h-full flex justify-center items-center p-4" ref={praktikaRef}>
+                            <div className="h-full flex justify-center items-center p-4 w-full" ref={praktikaRef}>
                                 <div className="h-10 md:h-[4rem] flex items-center justify-center">
                                     <Image src="/partner-logo/Praktika.svg" alt="Praktika" className="h-full w-full" width={100} height={100} />
                                 </div>
@@ -98,7 +98,7 @@ const Leader = () => {
                     <div className="grid grid-cols-1 md:grid-cols-3 items-center  w-full mt-16 gap-16 md:gap-0 text-white">
                         <div className="order-2 md:order-1" ref={feature1Ref}>
                             <MagicCard className="z-10 p-4 md:p-6 rounded-xl w-full md:max-w-[20rem]">
-                                <Blocks />
+                                <Blocks className="text-secondary"/>
                                 <div className="text-lg mt-6">Built for PMS</div>
                                 <p className="text-sm opacity-70">Native integrations—no workarounds</p>
                             </MagicCard>
@@ -114,7 +114,7 @@ const Leader = () => {
 
                         <div className="order-3" ref={feature2Ref}>
                             <MagicCard className="md:ms-auto z-10 p-4 md:p-6 rounded-xl w-full md:max-w-[20rem]">
-                                <Lock />
+                                <Lock className="text-secondary"/>
 
                                 <div className="text-lg mt-6">Secure & Compliant</div>
                                 <p className="text-sm opacity-70">Data privacy and realiability built-in</p>
@@ -125,7 +125,7 @@ const Leader = () => {
 
                     <div className="flex justify-center w-full text-white" ref={feature3Ref}>
                         <MagicCard className=" z-20 p-4 md:p-6 rounded-xl w-full md:max-w-[20rem] mt-16">
-                            <Layers2 />
+                            <Layers2  className="text-secondary"/>
 
                             <div className="text-lg mt-6">Scalable Architecture</div>
                             <p className="text-sm opacity-70">Single or multi-location ready</p>

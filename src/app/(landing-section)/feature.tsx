@@ -3,6 +3,7 @@ import Feature1 from "./features/feature1"
 import Feature2 from "./features/feature2"
 import Feature3 from "./features/feature3"
 import Feature4 from "./features/feature4"
+import Feature5 from "./features/feature5"
 
 const Feature = () => {
     return (
@@ -73,7 +74,9 @@ const Feature = () => {
                     </div>
                     <p className="text-sm text-foreground/70">Automatically sync leads from Google, Facebook, and your website.</p>
 
-                    <div className="h-[15rem]"></div>
+                    <div className="mt-10">
+                        <Feature5 />
+                    </div>
                 </div>
 
                 <div className="bg-white dark:bg-muted/20 border p-4 md:p-6 rounded-xl">

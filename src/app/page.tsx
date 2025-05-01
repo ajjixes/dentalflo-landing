@@ -10,6 +10,7 @@ import Contact from "./(landing-section)/contact";
 import Footer from "@/components/footer";
 import Faq from "./(landing-section)/faq";
 import Security from "./(landing-section)/security";
+import { AuroraBackground } from "@/components/ui/aurora-background";
 
 export default function Home() {
 
@@ -18,7 +19,9 @@ export default function Home() {
       <Navbar />
 
       <div className="relative overflow-hidden w-full">
-        <Hero />
+        <AuroraBackground>
+          <Hero />
+        </AuroraBackground>
 
         <div className="absolute -bottom-[23rem] max-w-8xl w-full">
           <div className="relative w-full h-[60rem] ">

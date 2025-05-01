@@ -16,11 +16,11 @@ const Hero = () => {
                 </div>
             </div>
 
-            <div className="text-3xl md:text-4xl lg:text-5xl max-w-5xl font-semibold text-center">
+            <div className="relative z-10 text-3xl md:text-4xl lg:text-5xl max-w-5xl font-semibold text-center">
                 Meet Your New AI-Powered Receptionist
                 Say Hello to Your AI Receptionist.
             </div>
-            <div className="text-sm md:text-lg max-w-3xl text-center mt-4 opacity-70">From Inquiry to Calendar Booking in Seconds with AI Automation Voice and SMS for seamless real-time calendar integration.</div>
+            <div className=" relative z-10 text-sm md:text-lg max-w-3xl text-center mt-4 opacity-70">From Inquiry to Calendar Booking in Seconds with AI Automation Voice and SMS for seamless real-time calendar integration.</div>
             <div className="relative z-10 flex gap-3 mt-10">
                 <Button variant="outline" size="lg" className="rounded-full">Get Started</Button>
                 <Button size="lg" className="rounded-full">View Demo</Button>
