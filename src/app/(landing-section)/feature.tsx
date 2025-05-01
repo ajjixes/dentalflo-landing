@@ -1,5 +1,6 @@
 import { AudioWaveform, LayoutPanelTop, TextSelect, Webhook, BotMessageSquare, Workflow } from "lucide-react"
 import Feature1 from "./features/feature1"
+import Feature2 from "./features/feature2"
 const Feature = () => {
     return (
         <div className="flex flex-col items-center justify-center mt-40 max-w-6xl w-full mx-auto p-4 md:p-6">
@@ -14,6 +15,19 @@ const Feature = () => {
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 w-full mt-16">
+                <div className="md:col-span-2 bg-white dark:bg-muted/20 border rounded-xl ">
+                    <div className=" p-4 md:p-6">
+                        <div className="flex items-center gap-2 mb-2">
+                            <LayoutPanelTop />
+                            <div className="text-lg md:text-xl">Web-Based Phone System</div>
+                        </div>
+                        <p className="text-sm text-foreground/70">Make and receive calls directly from your browser.</p>
+                    </div>
+
+                    <div className="h-[10rem] md:h-[15rem] lg:h-[25rem] w-full overflow-hidden">
+                        <Feature2 />
+                    </div>
+                </div>
                 <div className="overflow-hidden bg-white dark:bg-muted/20 border p-4 md:p-6 rounded-xl">
                     <div className="flex items-center gap-2 mb-2">
                         <AudioWaveform />
@@ -25,15 +39,7 @@ const Feature = () => {
                         <Feature1 />
                     </div>
                 </div>
-                <div className="bg-white dark:bg-muted/20 border p-4 md:p-6 rounded-xl ">
-                    <div className="flex items-center gap-2 mb-2">
-                        <LayoutPanelTop />
-                        <div className="text-lg md:text-xl">Web-Based Phone System</div>
-                    </div>
-                    <p className="text-sm text-foreground/70">Make and receive calls directly from your browser.</p>
 
-                    <div className="h-[15rem]"></div>
-                </div>
                 <div className="bg-white dark:bg-muted/20 border p-4 md:p-6 rounded-xl">
                     <div className="flex items-center gap-2 mb-2">
                         <TextSelect />
