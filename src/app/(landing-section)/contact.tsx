@@ -13,7 +13,7 @@ const Contact = () => {
     return (
         <motion.div
             ref={ref}
-            className="relative w-full flex flex-col items-center justify-center mt-40 py-28 overflow-hidden"
+            className="relative w-full flex flex-col items-center justify-center mt-40 py-28 overflow-hidden px-4 md:px-6"
             animate={{
                 backgroundColor: isInView ? 'var(--primary)' : '#111827'
             }}
@@ -31,11 +31,12 @@ const Contact = () => {
             {/* <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-primary w-full max-w-[60rem] h-[30rem] blur-3xl"></div> */}
             <div className="relative z-10 flex flex-col items-center justify-center">
                 <motion.div
-                    className="text-2xl md:text-3xl lg:text-4xl max-w-3xl text-center text-white"
+                    className="text-3xl md:text-4xl lg:text-5xl max-w-5xl text-center text-white"
                     initial={{ opacity: 0, y: 20 }}
                     animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                     transition={{ duration: 0.6 }}
                 >
+               
                     Experience the AI Front Desk in Action
                 </motion.div>
                 <motion.div

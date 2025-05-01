@@ -1,25 +1,29 @@
 import { AudioWaveform, LayoutPanelTop, TextSelect, Webhook, BotMessageSquare, Workflow } from "lucide-react"
-
+import Feature1 from "./features/feature1"
 const Feature = () => {
     return (
-        <div className="flex flex-col items-center justify-center pt-40 max-w-7xl w-full mx-auto p-4 md:p-6">
-            <div className="text-2xl md:text-3xl lg:text-4xl max-w-3xl text-center">
-                All-in-One AI for Patient Communication
-            </div>
-            <div className="text-sm md:text-base max-w-3xl text-center mt-4 opacity-70">
-                Free your team from admin. Automate calls, bookings, and follow-ups.
+        <div className="flex flex-col items-center justify-center mt-40 max-w-6xl w-full mx-auto p-4 md:p-6">
+            <div className="p-4 md:p-6">
+                <div className="text-2xl md:text-3xl lg:text-4xl max-w-3xl text-center">
+                    All-in-One AI for Patient Communication
+                </div>
+                <div className="text-sm md:text-base max-w-3xl text-center mt-4 opacity-70">
+                    Free your team from admin. Automate calls, bookings, and follow-ups.
+                </div>
+
             </div>
 
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full mt-16">
-                <div className="bg-white dark:bg-muted/20 border p-4 md:p-6 rounded-xl">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 w-full mt-16">
+                <div className="overflow-hidden bg-white dark:bg-muted/20 border p-4 md:p-6 rounded-xl">
                     <div className="flex items-center gap-2 mb-2">
                         <AudioWaveform />
                         <div className="text-lg md:text-xl">AI Voice Receptionist</div>
                     </div>
                     <p className="text-sm text-foreground/70">Greet, answer, and book appointments 24/7.</p>
 
-                    <div className="h-[15rem]"></div>
+                    <div className="relative h-[10rem]  md:h-[18rem] lg:h-[15rem] xl:h-[18rem] w-full">
+                        <Feature1 />
+                    </div>
                 </div>
                 <div className="bg-white dark:bg-muted/20 border p-4 md:p-6 rounded-xl ">
                     <div className="flex items-center gap-2 mb-2">

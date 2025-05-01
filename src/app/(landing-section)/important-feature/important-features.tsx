@@ -3,7 +3,7 @@ import { Appointment } from "./appointment";
 // import LeadNurturing from "./lead-nurturing";
 export const ImportantFeatures = () => {
     return (
-        <div className="flex flex-col items-center justify-center pt-40 max-w-7xl w-full mx-auto p-6">
+        <div className="flex flex-col items-center justify-center pt-40 max-w-6xl w-full mx-auto p-6">
             <div className="text-2xl md:text-3xl lg:text-4xl max-w-3xl text-center">
                 Two Smart AI Assistants. One Seamless Patient Experience.
             </div>

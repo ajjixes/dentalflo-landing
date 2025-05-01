@@ -85,12 +85,12 @@ export function MagicCard({
           radial-gradient(${gradientSize}px circle at ${mouseX}px ${mouseY}px,
           ${gradientFrom}, 
           ${gradientTo}, 
-          var(--border) 100%
+          var(--color-dark-border) 100%
           )
           `,
                 }}
             />
-            <div className="absolute inset-px rounded-[inherit] bg-white dark:bg-[#13192A]" />
+            <div className="absolute inset-px rounded-[inherit] bg-dark-primary" />
             {/* <motion.div
                 className="pointer-events-none absolute inset-px rounded-[inherit] opacity-0 transition-opacity duration-300 group-hover:opacity-100"
                 style={{

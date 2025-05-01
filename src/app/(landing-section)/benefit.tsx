@@ -26,7 +26,7 @@ const Benefit = () => {
         />
         <div className="absolute -top-[1rem] left-1/2 transform -translate-x-1/2 bg-primary w-full max-w-[46rem] h-[20rem] blur-3xl"></div>
 
-        <div className="relative z-10 flex flex-col items-center justify-center max-w-7xl mx-auto w-full p-4 md:p-6">
+        <div className="relative z-10 flex flex-col items-center justify-center max-w-6xl mx-auto w-full p-4 md:p-6">
           <div className="text-2xl md:text-3xl lg:text-4xl max-w-3xl text-center text-white">
             Simplify Your Tech Stack—Let AI Take Over the Busywork
           </div>
@@ -63,7 +63,7 @@ const Benefit = () => {
           </div>
         </div>
       </div> */}
-      <div className="relative z-10 mx-auto -mt-[14rem] w-full flex items-center justify-center max-w-7xl px-4 md:px-6">
+      <div className="relative z-10 mx-auto -mt-[14rem] w-full flex items-center justify-center max-w-6xl px-4 md:px-6">
         <div className="w-full bg-white dark:bg-background rounded-xl overflow-hidden ">
           {/* Browser Header */}
           <div className="grid grid-cols-3 gap-2 p-3 bg-muted border-b">

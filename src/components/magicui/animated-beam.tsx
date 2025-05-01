@@ -39,8 +39,8 @@ export const AnimatedBeam: React.FC<AnimatedBeamProps> = ({
   duration = Math.random() * 3 + 4,
   delay = 0,
   pathColor = {
-    light: "#DFDFDF",
-    dark: "#282D39"
+    light: "#242A38",
+    dark: "#242A38"
   },
   pathWidth = 2,
   pathOpacity = 1,
@@ -57,33 +57,33 @@ export const AnimatedBeam: React.FC<AnimatedBeamProps> = ({
   const [svgDimensions, setSvgDimensions] = useState({ width: 0, height: 0 });
 
   // Calculate the gradient coordinates based on the beamAxis and reverse prop
-  const gradientCoordinates = beamAxis === 'Y' 
+  const gradientCoordinates = beamAxis === 'Y'
     ? (reverse
-        ? {
-            x1: ["0%", "0%"],
-            x2: ["0%", "0%"],
-            y1: ["90%", "-10%"],
-            y2: ["100%", "0%"],
-          }
-        : {
-            x1: ["0%", "0%"],
-            x2: ["0%", "0%"],
-            y1: ["10%", "110%"],
-            y2: ["0%", "100%"],
-          })
+      ? {
+        x1: ["0%", "0%"],
+        x2: ["0%", "0%"],
+        y1: ["90%", "-10%"],
+        y2: ["100%", "0%"],
+      }
+      : {
+        x1: ["0%", "0%"],
+        x2: ["0%", "0%"],
+        y1: ["10%", "110%"],
+        y2: ["0%", "100%"],
+      })
     : (reverse
-        ? {
-            x1: ["90%", "-10%"],
-            x2: ["100%", "0%"],
-            y1: ["0%", "0%"],
-            y2: ["0%", "0%"],
-          }
-        : {
-            x1: ["10%", "110%"],
-            x2: ["0%", "100%"],
-            y1: ["0%", "0%"],
-            y2: ["0%", "0%"],
-          });
+      ? {
+        x1: ["90%", "-10%"],
+        x2: ["100%", "0%"],
+        y1: ["0%", "0%"],
+        y2: ["0%", "0%"],
+      }
+      : {
+        x1: ["10%", "110%"],
+        x2: ["0%", "100%"],
+        y1: ["0%", "0%"],
+        y2: ["0%", "0%"],
+      });
 
   useEffect(() => {
     const updatePath = () => {
@@ -105,10 +105,8 @@ export const AnimatedBeam: React.FC<AnimatedBeamProps> = ({
         const endY =
           rectB.top - containerRect.top + rectB.height / 2 + endYOffset;
 
-        const controlY = startY - curvature;
-        const d = `M ${startX},${startY} Q ${
-          (startX + endX) / 2
-        },${controlY} ${endX},${endY}`;
+        // Create L-shaped path using Line commands instead of Quadratic curve
+        const d = `M ${startX},${startY} L ${startX},${endY} L ${endX},${endY}`;
         setPathD(d);
       }
     };
@@ -116,7 +114,7 @@ export const AnimatedBeam: React.FC<AnimatedBeamProps> = ({
     // Initialize ResizeObserver
     const resizeObserver = new ResizeObserver((entries) => {
       // For all entries, recalculate the path
-      
+
       /* eslint-disable */
       for (let entry of entries) {
         updatePath();

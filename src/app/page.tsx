@@ -8,6 +8,8 @@ import Benefit from "./(landing-section)/benefit";
 import Leader from "./(landing-section)/leader";
 import Contact from "./(landing-section)/contact";
 import Footer from "@/components/footer";
+import Faq from "./(landing-section)/faq";
+import Security from "./(landing-section)/security";
 
 export default function Home() {
 
@@ -30,8 +32,12 @@ export default function Home() {
       {/* <ImportantFeatures /> */}
       <Feature />
       <Benefit />
-      <Leader />
+      <div className="w-full" id="leader">
+        <Leader />
+      </div>
       <Steps />
+      <Security />
+      <Faq />
       <Contact />
       <Footer />
     </div>

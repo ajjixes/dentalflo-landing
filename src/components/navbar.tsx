@@ -1,20 +1,62 @@
-
 "use client"
-import {
-    Navbar as ResizableNavbar,
-    NavBody,
-    NavItems,
-    MobileNav,
-    NavbarLogo,
-    NavbarButton,
-    MobileNavHeader,
-    MobileNavToggle,
-    MobileNavMenu,
-} from "@/components/ui/resizable-navbar"
-import { useState } from "react"
-import { ModeToggle } from "@/components/mode-toggle"
-import { Button } from "@/components/ui/button"
+import { useState, useEffect } from "react"
+import Image from "next/image"
+import Link from "next/link"
+import { ModeToggle } from "./mode-toggle"
+import { Button } from "./ui/button"
+
 export default function Navbar() {
+    const [isFullWidth, setIsFullWidth] = useState(true);
+    const [lastScrollY, setLastScrollY] = useState(0);
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [isInLeaderSection, setIsInLeaderSection] = useState(false);
+
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth > 768) {
+                setIsMobileMenuOpen(false);
+            }
+        };
+
+        // Add event listener
+        window.addEventListener('resize', handleResize);
+
+        // Call handler right away to check initial size
+        handleResize();
+
+        // Cleanup
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const currentScrollY = window.scrollY;
+            const leaderSection = document.querySelector('.bg-\\[\\#111827\\]');
+
+            if (leaderSection) {
+                const rect = leaderSection.getBoundingClientRect();
+                setIsInLeaderSection(rect.top <= 100 && rect.bottom >= 100);
+            }
+
+            // Scrolling down
+            if (currentScrollY > lastScrollY) {
+                setIsFullWidth(false);
+            }
+            // Scrolling up
+            else {
+                setIsFullWidth(true);
+            }
+
+            setLastScrollY(currentScrollY);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, [lastScrollY]);
+
     const navItems = [
         {
             name: "Features",
@@ -34,146 +76,82 @@ export default function Navbar() {
         },
     ]
 
-    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-
     return (
-        <div className="relative w-full">
-            <ResizableNavbar>
-                {/* Desktop Navigation */}
-                <NavBody>
-                    <NavbarLogo />
-                    <NavItems items={navItems} />
-                    <div className="flex items-center gap-4">
-                        <ModeToggle />
-                        <Button className="relative  hover:-translate-y-0.5 transition duration-20" variant="default">Book a call</Button>
-                    </div>
-                </NavBody>
-
-                {/* Mobile Navigation */}
-                <MobileNav>
-                    <MobileNavHeader>
-                        <NavbarLogo />
-                        <MobileNavToggle isOpen={isMobileMenuOpen} onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} />
-                    </MobileNavHeader>
-
-                    <MobileNavMenu isOpen={isMobileMenuOpen} onClose={() => setIsMobileMenuOpen(false)}>
-                        {navItems.map((item, idx) => (
-                            <a
-                                key={`mobile-link-${idx}`}
+        <div className={`fixed z-50 w-full  ${isFullWidth ? 'max-w-6xl top-6' : 'max-w-4xl top-10'} px-4 md:px-6 transition-all duration-300`}>
+            <div className="w-full relative">
+                <div className={`grid grid-cols-2 lg:grid-cols-4 items-center justify-center gap-10 w-full ${isInLeaderSection ? 'bg-dark-primary text-white' : 'bg-white/70 dark:bg-muted/70'} backdrop-blur-sm rounded-lg p-4 border ${isInLeaderSection ? 'border-white/10' : ''}`}>
+                    <Link
+                        href="#"
+                        className="flex items-center gap-2"
+                    >
+                        <Image
+                            src="/logo.png"
+                            alt="logo"
+                            width={30}
+                            height={30}
+                        />
+                        <span className="font-medium">Dentalflo AI</span>
+                    </Link>
+                    <div className="hidden lg:flex col-span-2 items-center justify-center gap-3">
+                        {navItems.map((item) => (
+                            <Link
                                 href={item.link}
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className="relative text-neutral-600 dark:text-neutral-300"
+                                key={item.name}
+                                className="text-sm font-medium"
                             >
-                                <span className="block">{item.name}</span>
-                            </a>
+                                {item.name}
+                            </Link>
                         ))}
-                        <div className="flex w-full gap-4">
-                            <ModeToggle />
-                            <NavbarButton onClick={() => setIsMobileMenuOpen(false)} variant="primary" className=" w-full">
-                                Book a call
-                            </NavbarButton>
-                        </div>
-                    </MobileNavMenu>
-                </MobileNav>
-            </ResizableNavbar>
-            {/* <DummyContent /> */}
+                    </div>
+                    <div className="hidden lg:flex items-center justify-end w-full gap-2">
+                        <ModeToggle className={`${isInLeaderSection ? 'bg-dark-primary text-white border-dark-border hover:bg-dark-secondary hover:text-white' : ''}`} />
+                        <Button>
+                            Book a call
+                        </Button>
+                    </div>
+                    <div className="lg:hidden flex items-center justify-end">
+                        <label className="hamburger">
+                            <input
+                                type="checkbox"
+                                checked={isMobileMenuOpen}
+                                onChange={(e) => setIsMobileMenuOpen(e.target.checked)}
+                            />
+                            <svg viewBox="0 0 32 32">
+                                <path style={{
+                                    stroke: `${isInLeaderSection ? 'white' : 'black'}`,
+                                }} className="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
+                                <path style={{
+                                    stroke: `${isInLeaderSection ? 'white' : 'black'}`,
+                                }}  className="line" d="M7 16 27 16"></path>
+                            </svg>
+                        </label>
+                    </div>
+                </div>
+                {/* mobile menu */}
+                <div className={`${isMobileMenuOpen ? 'block opacity-100 ' : 'hidden opacity-0'} border mt-2 ${isInLeaderSection ? 'bg-dark-primary text-white border-white/10' : 'bg-white/70 dark:bg-muted/70'} backdrop-blur-sm rounded-lg p-4 transition-all duration-200 ease-in-out overflow-hidden`}>
+                    <div className="flex flex-col gap-3">
+                        {navItems.map((item) => (
+                            <Link
+                                href={item.link}
+                                key={item.name}
+                                className="text-sm font-medium"
+                            >
+                                {item.name}
+                            </Link>
+                        ))}
+                    </div>
 
-            {/* Navbar */}
+                    <div className="flex items-center justify-end w-full gap-2 mt-3">
+                        <ModeToggle className={`${isInLeaderSection ? 'bg-dark-primary text-white border-dark-border hover:bg-dark-secondary hover:text-white' : ''}`} />
+                        <Button className="flex-1">
+                            Book a call
+                        </Button>
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }
 
 
 
-// const DummyContent = () => {
-//     return (
-//         <div className="container mx-auto p-8 pt-24">
-//             <h1 className="mb-4 text-center text-3xl font-bold">Check the navbar at the top of the container</h1>
-//             <p className="mb-10 text-center text-sm text-zinc-500">
-//                 For demo purpose we have kept the position as <span className="font-medium">Sticky</span>. Keep in mind that
-//                 this component is <span className="font-medium">fixed</span> and will not move when scrolling.
-//             </p>
-//             <div className="grid grid-cols-1 gap-4 md:grid-cols-4">
-//                 {[
-//                     {
-//                         id: 1,
-//                         title: "The",
-//                         width: "md:col-span-1",
-//                         height: "h-60",
-//                         bg: "bg-neutral-100 dark:bg-neutral-800",
-//                     },
-//                     {
-//                         id: 2,
-//                         title: "First",
-//                         width: "md:col-span-2",
-//                         height: "h-60",
-//                         bg: "bg-neutral-100 dark:bg-neutral-800",
-//                     },
-//                     {
-//                         id: 3,
-//                         title: "Rule",
-//                         width: "md:col-span-1",
-//                         height: "h-60",
-//                         bg: "bg-neutral-100 dark:bg-neutral-800",
-//                     },
-//                     {
-//                         id: 4,
-//                         title: "Of",
-//                         width: "md:col-span-3",
-//                         height: "h-60",
-//                         bg: "bg-neutral-100 dark:bg-neutral-800",
-//                     },
-//                     {
-//                         id: 5,
-//                         title: "F",
-//                         width: "md:col-span-1",
-//                         height: "h-60",
-//                         bg: "bg-neutral-100 dark:bg-neutral-800",
-//                     },
-//                     {
-//                         id: 6,
-//                         title: "Club",
-//                         width: "md:col-span-2",
-//                         height: "h-60",
-//                         bg: "bg-neutral-100 dark:bg-neutral-800",
-//                     },
-//                     {
-//                         id: 7,
-//                         title: "Is",
-//                         width: "md:col-span-2",
-//                         height: "h-60",
-//                         bg: "bg-neutral-100 dark:bg-neutral-800",
-//                     },
-//                     {
-//                         id: 8,
-//                         title: "You",
-//                         width: "md:col-span-1",
-//                         height: "h-60",
-//                         bg: "bg-neutral-100 dark:bg-neutral-800",
-//                     },
-//                     {
-//                         id: 9,
-//                         title: "Do NOT TALK about",
-//                         width: "md:col-span-2",
-//                         height: "h-60",
-//                         bg: "bg-neutral-100 dark:bg-neutral-800",
-//                     },
-//                     {
-//                         id: 10,
-//                         title: "F Club",
-//                         width: "md:col-span-1",
-//                         height: "h-60",
-//                         bg: "bg-neutral-100 dark:bg-neutral-800",
-//                     },
-//                 ].map((box) => (
-//                     <div
-//                         key={box.id}
-//                         className={`${box.width} ${box.height} ${box.bg} flex items-center justify-center rounded-lg p-4 shadow-sm`}
-//                     >
-//                         <h2 className="text-xl font-medium">{box.title}</h2>
-//                     </div>
-//                 ))}
-//             </div>
-//         </div>
-//     )
-// }
