@@ -20,19 +20,20 @@ const Feature = () => {
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 w-full mt-16">
-                <div className="lg:col-span-2 bg-white dark:bg-muted/20 border rounded-xl ">
-                    <div className=" p-4 md:p-6">
+                <div className="lg:col-span-2 bg-white dark:bg-muted/20 border rounded-xl overflow-hidden">
+                    <div className=" p-4 md:p-6 ">
                         <div className="flex items-center gap-2 mb-2">
-                            <LayoutPanelTop />
-                            <div className="text-lg md:text-xl">Web-Based Phone System</div>
+                            <Workflow />
+                            <div className="text-lg md:text-xl">Custom Workflow Manager</div>
                         </div>
-                        <p className="text-sm text-foreground/70">Make and receive calls directly from your browser.</p>
+                        <p className="text-sm text-foreground/70">Voice and SMS AI tag-team to follow up and re-engage.</p>
                     </div>
 
-                    <div className="h-[10rem] md:h-[15rem] lg:h-[25rem] w-full overflow-hidden">
-                        <Feature2 />
+                    <div className="w-full h-[30rem]">
+                        <Feature6 />
                     </div>
                 </div>
+
                 <div className="overflow-hidden flex flex-col justify-between bg-white dark:bg-muted/20 border  rounded-xl">
                     <div className="p-4 md:p-6">
                         <div className="flex items-center gap-2 mb-2">
@@ -46,28 +47,7 @@ const Feature = () => {
                         <Feature1 />
                     </div>
                 </div>
-                <div className="overflow-hidden bg-white dark:bg-muted/20 border p-4 md:p-6 rounded-xl">
-                    <div className="flex items-center gap-2 mb-2">
-                        <TextSelect />
-                        <div className="text-lg md:text-xl">Call Transcription & Summaries</div>
-                    </div>
-                    <p className="text-sm text-foreground/70">Every call captured—read it all at a glance.</p>
 
-                    <div className="mt-8 mb-4 min-h-[15rem]">
-                        <Feature3 />
-                    </div>
-                </div>
-                <div className="lg:col-span-2 bg-white dark:bg-muted/20 border p-4 md:p-6 rounded-xl">
-                    <div className="flex items-center gap-2 mb-2">
-                        <BotMessageSquare />
-                        <div className="text-lg md:text-xl">AI Booking Chat Widget</div>
-                    </div>
-                    <p className="text-sm text-foreground/70">More than just chat—this AI books appointments directly.</p>
-
-                    <div className="mt-10 w-full overflow-hidden">
-                        <Feature4 />
-                    </div>
-                </div>
                 <div className="bg-white dark:bg-muted/20 border rounded-xl">
                     <div className="p-4 md:p-6">
                         <div className="flex items-center gap-2 mb-2">
@@ -77,24 +57,49 @@ const Feature = () => {
                         <p className="text-sm text-foreground/70">Automatically sync leads from Google, Facebook, and your website.</p>
                     </div>
 
-                    <div className="mt-5">
-                        <Feature5 />
-                    </div>
+                    <Feature5 />
                 </div>
 
-                <div className="bg-white dark:bg-muted/20 border rounded-xl overflow-hidden">
-                    <div className=" p-4 md:p-6 ">
+                <div className="lg:col-span-2 bg-white dark:bg-muted/20 border rounded-xl ">
+                    <div className=" p-4 md:p-6">
                         <div className="flex items-center gap-2 mb-2">
-                            <Workflow />
-                            <div className="text-lg md:text-xl">Custom Workflow Manager</div>
+                            <LayoutPanelTop />
+                            <div className="text-lg md:text-xl">Web-Based Phone System</div>
                         </div>
-                        <p className="text-sm text-foreground/70">Voice and SMS AI tag-team to follow up and re-engage.</p>
+                        <p className="text-sm text-foreground/70">Make and receive calls directly from your browser.</p>
                     </div>
 
-                    <div className="w-full h-full mt-[1rem]">
-                        <Feature6 />
+                    <div className="h-[10rem] md:h-[15rem] lg:h-[25rem] w-full overflow-hidden">
+                        <Feature2 />
                     </div>
                 </div>
+
+                <div className="overflow-hidden bg-white dark:bg-muted/20 border p-4 md:p-6 rounded-xl">
+                    <div className="flex items-center gap-2 mb-2">
+                        <TextSelect />
+                        <div className="text-lg md:text-xl">Call Transcription & Summaries</div>
+                    </div>
+                    <p className="text-sm text-foreground/70">Every call captured—read it all at a glance.</p>
+
+                    <div className="h-full p-4 pb-10 flex items-center">
+                        <Feature3 />
+                    </div>
+                </div>
+                
+                <div className="bg-white dark:bg-muted/20 border rounded-xl overflow-hidden ">
+                    <div className="p-4 md:p-6">
+                        <div className="flex items-center gap-2 mb-2">
+                            <BotMessageSquare />
+                            <div className="text-lg md:text-xl">AI Booking Chat Widget</div>
+                        </div>
+                        <p className="text-sm text-foreground/70">More than just chat—this AI books appointments directly.</p>
+                    </div>
+
+                    <div className="h-full pb-4 flex justify-center">
+                        <Feature4 />
+                    </div>
+                </div>
+
             </div>
         </div>
     )

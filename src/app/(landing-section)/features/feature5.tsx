@@ -21,7 +21,7 @@ const Feature5 = () => {
     return (
         <div className="flex items-center flex-col relative p-4 md:p-6" ref={leadCaptureContainerRef}>
             <DotPattern
-                glow={true}
+             
                 className="[mask-image:radial-gradient(250px_circle_at_center,white,transparent)]"
             />
             <div className="flex w-full justify-between">
@@ -36,9 +36,8 @@ const Feature5 = () => {
                 </div>
             </div>
 
-            <div className="flex w-full justify-center mb-10">
-                <div className="h-16 aspect-square" ref={spacerRef1}></div>
-
+            <div className="flex w-full justify-center ">
+                <div className="h-10 aspect-square" ref={spacerRef1}></div>
             </div>
 
             <div className="z-10 w-full max-w-[17rem] border bg-white dark:bg-muted rounded-lg p-4 " ref={leadCaptureRef}>

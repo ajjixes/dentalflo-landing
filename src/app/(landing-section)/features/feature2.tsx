@@ -1,9 +1,9 @@
 import React from 'react'
-
+import Image from 'next/image'
 const Feature2 = () => {
     return (
         <div className='flex justify-center w-full'>
-            <svg className='w-[90%] h-auto' width="1026" height="664" viewBox="0 0 1026 664" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg className='w-[90%] h-auto' viewBox="0 0 1026 664" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clipPath="url(#clip0_544_1233)">
                     <rect className='fill-muted' width="1024" height="56" transform="translate(1 1)" />
                     <path fillRule="evenodd" clipRule="evenodd" d="M31 35C34.3137 35 37 32.3137 37 29C37 25.6863 34.3137 23 31 23C27.6863 23 25 25.6863 25 29C25 32.3137 27.6863 35 31 35Z" fill="#ED6A5E" />
@@ -87,7 +87,17 @@ const Feature2 = () => {
                     </clipPath>
                 </defs>
             </svg>
+
+
         </div>
+        // <div className="flex justify-center w-full">
+        //     <iframe src='/feature/WebBased.svg'
+        //         width="100%"
+        //         height="100%"
+        //         title="SVGator Animation" className='bg-red-100' />
+        //     {/* <Image src="/feature/WebBased.webp" className='bg-red-100 absolute' alt="WebBased" height={500} width={500} /> */}
+        // </div>
+
     )
 }
 

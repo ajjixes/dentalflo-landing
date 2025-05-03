@@ -21,9 +21,9 @@ const Feature6 = () => {
     return (
         <div className="flex items-center flex-col relative w-full h-full" ref={flowContainerRef}>
             <GridPattern
-                width={32}
-                height={32}
-                className="[mask-image:radial-gradient(250px_circle_at_center,white,transparent)]"
+                width={23}
+                height={23}
+                className="[mask-image:radial-gradient(500px_circle_at_center,white,transparent)]"
             />
          
 

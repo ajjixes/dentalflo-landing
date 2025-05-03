@@ -43,6 +43,7 @@ const Leader = () => {
     const dentallyRef = useRef<HTMLDivElement>(null);
     const praktikaRef = useRef<HTMLDivElement>(null);
     const dentaflowRef = useRef<HTMLDivElement>(null);
+    const dental4WindowsRef = useRef<HTMLDivElement>(null);
     const feature1Ref = useRef<HTMLDivElement>(null);
     const feature2Ref = useRef<HTMLDivElement>(null);
     const feature3Ref = useRef<HTMLDivElement>(null);
@@ -63,7 +64,7 @@ const Leader = () => {
 
                 <div className="mt-16 relative flex flex-col items-center justify-center min-h-[500px] w-full overflow-hidden rounded-lg border border-white/10 bg-dark-primary p-4 lg:p-10" ref={containerRef}>
                     <MagicCard className="bg-dark-primary z-20 rounded-xl relative w-full max-w-3xl">
-                        <div className="grid grid-cols-2 md:grid-cols-4 items-center justify-center w-full" ref={partnersRef}>
+                        <div className="grid grid-cols-2 md:grid-cols-5 items-center justify-center w-full" ref={partnersRef}>
                             <div className="border-b md:border-b-0 border-r border-white/10 h-full flex justify-center items-center p-4 w-full" ref={corePracticeRef}>
                                 <div className="h-10 md:h-[2.2rem] flex items-center justify-center">
                                     <Image src="/partner-logo/CorePractice.svg" alt="Dental4Web" className="h-full w-full" width={100} height={100} />
@@ -74,12 +75,17 @@ const Leader = () => {
                                     <Image src="/partner-logo/Dental4Web.svg" alt="Dental4Web" className="h-full w-full" width={100} height={100} />
                                 </div>
                             </div>
-                            <div className="border-r border-white/10 h-full flex justify-center items-center p-4 w-full" ref={dentallyRef}>
+                            <div className="border-b md:border-b-0 border-r border-white/10 h-full flex justify-center items-center p-4 w-full" ref={dental4WindowsRef}>
+                                <div className="h-10 md:h-[2.2rem] flex items-center justify-center">
+                                    <Image src="/partner-logo/Dental4windows.svg" alt="Dental4windows" className="h-full w-full" width={100} height={100} />
+                                </div>
+                            </div>
+                            <div className="border-b md:border-b-0 md:border-r border-white/10 h-full flex justify-center items-center p-4 w-full" ref={dentallyRef}>
                                 <div className="h-10 md:h-[2.2rem] flex items-center justify-center">
                                     <Image src="/partner-logo/Dentally.svg" alt="Dentally" className="h-full w-full" width={100} height={100} />
                                 </div>
                             </div>
-                            <div className="h-full flex justify-center items-center p-4 w-full" ref={praktikaRef}>
+                            <div className="col-span-2 md:col-span-1 h-full flex justify-center items-center p-4 w-full" ref={praktikaRef}>
                                 <div className="h-10 md:h-[4rem] flex items-center justify-center">
                                     <Image src="/partner-logo/Praktika.svg" alt="Praktika" className="h-full w-full" width={100} height={100} />
                                 </div>
@@ -159,6 +165,15 @@ const Leader = () => {
                         toRef={spacerRef}
                         reverse={true}
                         beamAxis="X"
+                        className="hidden md:block"
+                    />
+                    <AnimatedBeam
+                        duration={4}
+                        delay={0}
+                        containerRef={containerRef}
+                        fromRef={dental4WindowsRef}
+                        toRef={spacerRef}
+                        beamAxis="Y"
                         className="hidden md:block"
                     />
                     <AnimatedBeam
