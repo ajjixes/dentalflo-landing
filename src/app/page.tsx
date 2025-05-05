@@ -10,6 +10,8 @@ import Contact from "./(landing-section)/contact";
 import Footer from "@/components/footer";
 import Faq from "./(landing-section)/faq";
 import Security from "./(landing-section)/security";
+import Testimonial from "./(landing-section)/testimonial";
+
 
 export default function Home() {
 
@@ -36,6 +38,7 @@ export default function Home() {
         <Leader />
       </div>
       <Steps />
+      <Testimonial />
       <Security />
       <Faq />
       <Contact />

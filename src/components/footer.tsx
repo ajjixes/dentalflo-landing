@@ -1,15 +1,29 @@
+"use client"
+
 import { CheckCheck, ChevronUp } from 'lucide-react'
 import Image from 'next/image'
+
 const Footer = () => {
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    };
+
     return (
         <div className="bg-[#111827] w-full py-8">
             <div className="flex flex-col items-center justify-center max-w-6xl w-full mx-auto p-6 text-white">
                 <div className="flex justify-between w-full mb-10">
                     <div className='space-y-2'>
                         <Image src="/logo.png" alt="logo" className='w-10' width={100} height={100} />
-                        <p className='max-w-[18rem] text-sm opacity-70'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, quod?</p>
+                        <p className='max-w-[18rem] text-sm opacity-70'>From Inquiry to Calendar Booking in Seconds with AI Automation Voice and SMS for seamless real-time calendar integration.</p>
                     </div>
-                    <div className=" h-10 w-10 flex items-center justify-center rounded-full bg-primary">
+                    <div 
+                        className="h-10 w-10 flex items-center justify-center rounded-full bg-primary cursor-pointer hover:bg-primary/90 transition-colors"
+                        onClick={scrollToTop}
+                        aria-label="Scroll to top"
+                    >
                         <ChevronUp />
                     </div>
                 </div>
@@ -34,10 +48,10 @@ const Footer = () => {
                     <div className='flex-1'>
                         <div className="mb-4">Social</div>
 
-                        <div className="space-y-1">
-                            <div className="text-sm opacity-70 whitespace-nowrap">Facebook</div>
-                            <div className="text-sm opacity-70 whitespace-nowrap">Instagram</div>
-                            <div className="text-sm opacity-70 whitespace-nowrap">linkedin</div>
+                        <div className="flex flex-col gap-1">
+                            <a href="https://www.facebook.com/dentalfloai" target="_blank" rel="noopener noreferrer" className="text-sm opacity-70 whitespace-nowrap">Facebook</a>
+                            <a href="https://www.instagram.com/dentalfloai/" target="_blank" rel="noopener noreferrer" className="text-sm opacity-70 whitespace-nowrap">Instagram</a>
+                            <a href="https://www.linkedin.com/company/dentalflo-ai/" target="_blank" rel="noopener noreferrer" className="text-sm opacity-70 whitespace-nowrap">linkedin</a>
                         </div>
                     </div>
                     <div className='flex-1'>
