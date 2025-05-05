@@ -58,22 +58,22 @@ export default function Navbar() {
     }, [lastScrollY]);
 
     const navItems = [
-        // {
-        //     name: "Features",
-        //     link: "#features",
-        // },
-        // {
-        //     name: "Documentation",
-        //     link: "#documentation",
-        // },
-        // {
-        //     name: "FAQ",
-        //     link: "#faq",
-        // },
-        // {
-        //     name: "Contact Us",
-        //     link: "#contact",
-        // },
+        {
+            name: "Features",
+            link: "#features",
+        },
+        {
+            name: "Documentation",
+            link: "#documentation",
+        },
+        {
+            name: "FAQ",
+            link: "#faq",
+        },
+        {
+            name: "Contact Us",
+            link: "#contact",
+        },
     ]
 
     return (

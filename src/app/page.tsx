@@ -38,7 +38,7 @@ export default function Home() {
         <Leader />
       </div>
       <Steps />
-      <Testimonial />
+      {/* <Testimonial /> */}
       <Security />
       <Faq />
       <Contact />
