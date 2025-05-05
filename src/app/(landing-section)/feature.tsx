@@ -14,7 +14,7 @@ const Feature = () => {
                     All-in-One AI for Patient Communication
                 </div>
                 <div className="text-sm md:text-base max-w-3xl text-center mt-4 opacity-70">
-                    Free your team from admin. Automate calls, bookings, and follow-ups.
+                    Free your team from admin work. Automate calls, bookings, and follow-ups,
                 </div>
 
             </div>
@@ -26,10 +26,10 @@ const Feature = () => {
                             <Workflow />
                             <div className="text-lg md:text-xl">Custom Workflow Manager</div>
                         </div>
-                        <p className="text-sm text-foreground/70">Voice and SMS AI tag-team to follow up and re-engage.</p>
+                        <p className="text-sm text-foreground/70">Voice and SMS AI agents team up to engage your patients.</p>
                     </div>
 
-                    <div className="w-full h-[30rem]">
+                    <div className="w-full">
                         <Feature6 />
                     </div>
                 </div>
@@ -52,7 +52,7 @@ const Feature = () => {
                     <div className="p-4 md:p-6">
                         <div className="flex items-center gap-2 mb-2">
                             <Webhook />
-                            <div className="text-lg md:text-xl">AI powered CRM & Lead Capture</div>
+                            <div className="text-lg md:text-xl">AI-powered CRM & Lead Capturing</div>
                         </div>
                         <p className="text-sm text-foreground/70">Automatically sync leads from Google, Facebook, and your website.</p>
                     </div>

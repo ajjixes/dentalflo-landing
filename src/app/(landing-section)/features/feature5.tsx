@@ -21,8 +21,7 @@ const Feature5 = () => {
     return (
         <div className="flex items-center flex-col relative p-4 md:p-6" ref={leadCaptureContainerRef}>
             <DotPattern
-             
-                className="[mask-image:radial-gradient(250px_circle_at_center,white,transparent)]"
+                className="opacity-70 [mask-image:radial-gradient(250px_circle_at_center,white,transparent)]"
             />
             <div className="flex w-full justify-between">
                 <div className="z-10 h-16 aspect-square bg-muted border rounded-lg p-4" ref={FacebookRef}>

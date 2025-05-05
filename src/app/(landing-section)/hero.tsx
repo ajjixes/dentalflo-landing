@@ -1,12 +1,36 @@
-// import { cn } from "@/lib/utils"
+"use client"
+
 import { AnimatedShinyText } from "@/components/magicui/animated-shiny-text";
 import { Button } from "@/components/ui/button";
 import { Iphone15Pro } from "@/components/magicui/iphone-15-pro";
 import Image from "next/image";
 import { Input } from "@/components/ui/input";
+import { useEffect, useState } from "react";
 import { SignalHigh, WifiHigh, BatteryFull } from "lucide-react";
 
 const Hero = () => {
+    const [time, setTime] = useState('');
+
+    useEffect(() => {
+        const updateTime = () => {
+            const now = new Date();
+            const options: Intl.DateTimeFormatOptions = {
+                hour: '2-digit',
+                minute: '2-digit',
+             
+                hour12: true,
+                timeZone: 'Australia/Sydney',
+            };
+            const timeString = now.toLocaleTimeString('en-AU', options);
+            setTime(timeString);
+        };
+
+        updateTime(); // set immediately
+        const interval = setInterval(updateTime, 1000); // update every second
+        return () => clearInterval(interval); // cleanup
+    }, []);
+
+
     return (
         <div className="flex flex-col items-center justify-center pt-40 px-6  ">
             <div className="z-10 flex items-center justify-center mb-4">
@@ -29,12 +53,16 @@ const Hero = () => {
             </div>
 
             <div className="relative flex justify-center items-start  h-[35rem] w-full max-w-[29rem] overflow-y-hidden ">
-                {/* <span className="absolute bottom-0 z-20 bg-linear-to-b from-transparent to-background h-[10rem] w-full"></span> */}
-                {/* <div className="absolute right-14 z-20 top-[4.5rem] flex items-center gap-2">
-                    <SignalHigh strokeWidth={2.5}/>
-                    <WifiHigh strokeWidth={2.5}/>
-                    <BatteryFull className="mt-2"/>
-                </div> */}
+                <div className="absolute z-20 top-[3.2rem] xs:top-[3.6rem] sm:top-[3.9rem] md:top-[4.5rem] flex items-center justify-between w-[calc(100%-3.6rem)] xs:w-[calc(100%-5rem)] md:w-[calc(100%-6rem)] h-[40px]  ">
+                    <div className="text-xs opacity-70">
+                        {time}
+                    </div>
+                    <div className="flex items-center gap-1 sm:gap-2 opacity-70">
+                        <SignalHigh strokeWidth={2.5} className="  h-4 w-4 md:h-6 md:w-6" />
+                        <WifiHigh strokeWidth={2.5} className="  h-4 w-4 md:h-6 md:w-6" />
+                        <BatteryFull className="mt-2  h-4 w-4 md:h-6 md:w-6" />
+                    </div>
+                </div>
                 <div className="absolute top-40 z-20 w-[calc(100%-4rem)] ">
                     <div className="flex gap-2 items-center p-4 bg-white dark:bg-accent border rounded-xl">
                         <Image src="/logo.png" className="w-10 h-10" alt="Logo" width={100} height={100} />

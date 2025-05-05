@@ -104,7 +104,9 @@ const Leader = () => {
                     <div className="grid grid-cols-1 md:grid-cols-3 items-center  w-full mt-16 gap-16 md:gap-0 text-white">
                         <div className="order-2 md:order-1" ref={feature1Ref}>
                             <MagicCard className="z-10 p-4 md:p-6 rounded-xl w-full md:max-w-[20rem]">
-                                <Blocks className="text-secondary"/>
+                                <div className="w-fit p-2 bg-secondary/10 border border-secondary/50 rounded-lg">
+                                    <Blocks size={20} className="text-secondary" />
+                                </div>
                                 <div className="text-lg mt-6">Built for PMS</div>
                                 <p className="text-sm opacity-70">Native integrations—no workarounds</p>
                             </MagicCard>
@@ -120,8 +122,9 @@ const Leader = () => {
 
                         <div className="order-3" ref={feature2Ref}>
                             <MagicCard className="md:ms-auto z-10 p-4 md:p-6 rounded-xl w-full md:max-w-[20rem]">
-                                <Lock className="text-secondary"/>
-
+                                <div className="w-fit p-2 bg-secondary/10 border border-secondary/50 rounded-lg">
+                                    <Lock size={20} className="text-secondary" />
+                                </div>
                                 <div className="text-lg mt-6">Secure & Compliant</div>
                                 <p className="text-sm opacity-70">Data privacy and realiability built-in</p>
                             </MagicCard>
@@ -131,7 +134,9 @@ const Leader = () => {
 
                     <div className="flex justify-center w-full text-white" ref={feature3Ref}>
                         <MagicCard className=" z-20 p-4 md:p-6 rounded-xl w-full md:max-w-[20rem] mt-16">
-                            <Layers2  className="text-secondary"/>
+                            <div className="w-fit p-2 bg-secondary/10 border border-secondary/50 rounded-lg">
+                                <Layers2 size={20} className="text-secondary" />
+                            </div>
 
                             <div className="text-lg mt-6">Scalable Architecture</div>
                             <p className="text-sm opacity-70">Single or multi-location ready</p>
@@ -234,7 +239,7 @@ const Leader = () => {
                         reverse={true}
                     />
 
-        
+
                     <FlickeringGrid
                         className="absolute inset-0 mt-1.5 z-0 size-full opacity-50"
                         squareSize={4}

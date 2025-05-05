@@ -4,6 +4,8 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  --breakpoint-2xs: 320px;
+  --breakpoint-xs: 375px;
   --color-tertiary: #645EE2;
   --color-dark-primary: #111827;
   --color-dark-secondary: #172035;

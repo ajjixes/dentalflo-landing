@@ -108,13 +108,12 @@ export const AnimatedBeam: React.FC<AnimatedBeamProps> = ({
         // Create L-shaped path using Line commands instead of Quadratic curve
         const d = `M ${startX},${startY} L ${startX},${endY} L ${endX},${endY}`;
         setPathD(d);
+
+        // const controlY = startY - curvature;
+        // const d = `M ${startX},${startY} Q ${(startX + endX) / 2
+        //   },${controlY} ${endX},${endY}`;
+        // setPathD(d);
       }
-
-
-      // const controlY = startY - curvature;
-      // const d = `M ${startX},${startY} Q ${(startX + endX) / 2
-      //   },${controlY} ${endX},${endY}`;
-      // setPathD(d);
     };
 
     // Initialize ResizeObserver
