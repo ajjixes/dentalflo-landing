@@ -58,22 +58,22 @@ export default function Navbar() {
     }, [lastScrollY]);
 
     const navItems = [
-        {
-            name: "Features",
-            link: "#features",
-        },
-        {
-            name: "Documentation",
-            link: "#documentation",
-        },
-        {
-            name: "FAQ",
-            link: "#faq",
-        },
-        {
-            name: "Contact Us",
-            link: "#contact",
-        },
+        // {
+        //     name: "Features",
+        //     link: "#features",
+        // },
+        // {
+        //     name: "Documentation",
+        //     link: "#documentation",
+        // },
+        // {
+        //     name: "FAQ",
+        //     link: "#faq",
+        // },
+        // {
+        //     name: "Contact Us",
+        //     link: "#contact",
+        // },
     ]
 
     return (
@@ -81,7 +81,7 @@ export default function Navbar() {
             <div className="w-full relative">
                 <div className={`grid grid-cols-2 lg:grid-cols-4 items-center justify-center gap-10 w-full ${isInLeaderSection ? 'bg-dark-primary text-white' : 'bg-white/70 dark:bg-muted/70'} backdrop-blur-sm rounded-lg p-4 border ${isInLeaderSection ? 'border-white/10' : ''}`}>
                     <Link
-                        href="#"
+                        href="/"
                         className="flex items-center gap-2"
                     >
                         <Image
