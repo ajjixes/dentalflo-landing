@@ -8,7 +8,7 @@ import Feature6 from "./features/feature6"
 
 const Feature = () => {
     return (
-        <div className="flex flex-col items-center justify-center mt-40 max-w-6xl w-full mx-auto p-4 md:p-6">
+        <div className="relative flex flex-col items-center justify-center mt-40 max-w-6xl w-full mx-auto p-4 md:p-6">
             <div className="p-4 md:p-6">
                 <div className="text-2xl md:text-3xl lg:text-4xl max-w-3xl text-center">
                     All-in-One AI for Patient Communication
@@ -20,7 +20,7 @@ const Feature = () => {
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 w-full mt-16">
-                <div className="lg:col-span-2 bg-white dark:bg-muted/20 border rounded-xl overflow-hidden">
+                <div className="lg:col-span-2 bg-white dark:bg-dark-primary border rounded-xl overflow-hidden">
                     <div className=" p-4 md:p-6 ">
                         <div className="flex items-center gap-2 mb-2">
                             <Workflow />
@@ -34,7 +34,7 @@ const Feature = () => {
                     </div>
                 </div>
 
-                <div className="overflow-hidden flex flex-col justify-between bg-white dark:bg-muted/20 border  rounded-xl">
+                <div className="overflow-hidden flex flex-col justify-between bg-white dark:bg-dark-primary border  rounded-xl">
                     <div className="p-4 md:p-6">
                         <div className="flex items-center gap-2 mb-2">
                             <AudioWaveform />
@@ -48,7 +48,7 @@ const Feature = () => {
                     </div>
                 </div>
 
-                <div className="bg-white dark:bg-muted/20 border rounded-xl">
+                <div className="bg-white dark:bg-dark-primary border rounded-xl">
                     <div className="p-4 md:p-6">
                         <div className="flex items-center gap-2 mb-2">
                             <Webhook />
@@ -60,7 +60,7 @@ const Feature = () => {
                     <Feature5 />
                 </div>
 
-                <div className="lg:col-span-2 bg-white dark:bg-muted/20 border rounded-xl ">
+                <div className="lg:col-span-2 bg-white dark:bg-dark-primary border rounded-xl ">
                     <div className=" p-4 md:p-6">
                         <div className="flex items-center gap-2 mb-2">
                             <LayoutPanelTop />
@@ -74,7 +74,7 @@ const Feature = () => {
                     </div>
                 </div>
 
-                <div className="overflow-hidden bg-white dark:bg-muted/20 border p-4 md:p-6 rounded-xl">
+                <div className="overflow-hidden bg-white dark:bg-dark-primary border p-4 md:p-6 rounded-xl">
                     <div className="flex items-center gap-2 mb-2">
                         <TextSelect />
                         <div className="text-lg md:text-xl">Call Transcription & Summaries</div>
@@ -86,7 +86,7 @@ const Feature = () => {
                     </div>
                 </div>
                 
-                <div className="bg-white dark:bg-muted/20 border rounded-xl overflow-hidden ">
+                <div className="bg-white dark:bg-dark-primary border rounded-xl overflow-hidden ">
                     <div className="p-4 md:p-6">
                         <div className="flex items-center gap-2 mb-2">
                             <BotMessageSquare />
