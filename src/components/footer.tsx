@@ -3,14 +3,49 @@
 import { CheckCheck, ChevronUp, } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useEffect } from 'react'
+import { useRouter } from 'next/navigation'
 
 const Footer = () => {
+    const router = useRouter();
+
     const scrollToTop = () => {
         window.scrollTo({
             top: 0,
             behavior: 'smooth'
         });
     };
+
+    useEffect(() => {
+        const handleSmoothScroll = (e: MouseEvent) => {
+            const target = e.target as HTMLElement;
+            const link = target.closest('a');
+            
+            if (link && link.hash && link.hash.startsWith('#')) {
+                e.preventDefault();
+                
+                // Check if we're not on the home page
+                if (window.location.pathname !== '/') {
+                    // Navigate to home page with the hash
+                    router.push(`/${link.hash}`);
+                } else {
+                    // Already on home page, just scroll
+                    const targetElement = document.querySelector(link.hash);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            }
+        };
+
+        document.addEventListener('click', handleSmoothScroll);
+        
+        return () => {
+            document.removeEventListener('click', handleSmoothScroll);
+        };
+    }, [router]);
 
     return (
         <div className="relative z-10 bg-[#111827] w-full py-8">
@@ -29,14 +64,15 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className="flex flex-wrap gap-10 w-full">
-                    {/* <div className='flex-1'>
+                    <div className='flex-1'>
                         <div className="mb-4">Navigation</div>
 
-                        <div className="space-y-1">
-                            <div className="text-sm opacity-70 whitespace-nowrap">Features</div>
-                            <div className="text-sm opacity-70 whitespace-nowrap">Contact Us</div>
+                        <div className="flex flex-col gap-1">
+                            <Link href="#features" className="text-sm opacity-70 whitespace-nowrap">Features</Link>
+                            <Link href="#faq" className="text-sm opacity-70 whitespace-nowrap">FAQ</Link>
+                            <Link href="/contact" className="text-sm opacity-70 whitespace-nowrap">Contact Us</Link>
                         </div>
-                    </div> */}
+                    </div>
                     <div className='flex-1'>
                         <div className="mb-4">Legal</div>
 

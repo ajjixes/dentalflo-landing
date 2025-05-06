@@ -31,16 +31,21 @@ export default function Home() {
       </div>
 
       <Partners />
-      {/* <ImportantFeatures /> */}
-      <Feature />
+      <div className="w-full" id="features">
+        <Feature />
+      </div>
+      
       <Benefit />
-      <div className="w-full" id="leader">
+      <div className="mt-20 w-full bg-[#111827]" id="leader">
+        <Testimonial />
         <Leader />
       </div>
-      <Steps />
-      {/* <Testimonial /> */}
+      {/* <Steps /> */}
+
       <Security />
-      <Faq />
+      <div className="w-full" id="faq">
+        <Faq />
+      </div>
       <Contact />
       <Footer />
     </div>

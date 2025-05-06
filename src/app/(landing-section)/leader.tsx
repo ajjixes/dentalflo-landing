@@ -53,7 +53,7 @@ const Leader = () => {
 
 
     return (
-        <div className="mt-20 bg-[#111827] w-full">
+        <div className="w-full">
             <div className='flex flex-col items-center justify-center max-w-6xl py-20 w-full mx-auto p-6' >
                 <div className="text-2xl md:text-3xl lg:text-4xl max-w-3xl text-center text-white">
                     Enterprise-Ready. Backed by Australia’s Dental Leaders.

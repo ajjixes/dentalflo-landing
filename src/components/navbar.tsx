@@ -4,7 +4,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { ModeToggle } from "./mode-toggle"
 import { Button } from "./ui/button"
-
+import { useRouter } from "next/navigation"
 export default function Navbar() {
     const [isFullWidth, setIsFullWidth] = useState(true);
     const [lastScrollY, setLastScrollY] = useState(0);
@@ -57,23 +57,48 @@ export default function Navbar() {
         };
     }, [lastScrollY]);
 
+
+    const router = useRouter();
+    useEffect(() => {
+        const handleSmoothScroll = (e: MouseEvent) => {
+            const target = e.target as HTMLElement;
+            const link = target.closest('a');
+
+            if (link && link.hash && link.hash.startsWith('#')) {
+                e.preventDefault();
+
+                // Check if we're not on the home page
+                if (window.location.pathname !== '/') {
+                    // Navigate to home page with the hash
+                    router.push(`/${link.hash}`);
+                } else {
+                    // Already on home page, just scroll
+                    const targetElement = document.querySelector(link.hash);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            }
+        };
+
+        document.addEventListener('click', handleSmoothScroll);
+
+        return () => {
+            document.removeEventListener('click', handleSmoothScroll);
+        };
+    }, [router]);
+
     const navItems = [
-        // {
-        //     name: "Features",
-        //     link: "#features",
-        // },
-        // {
-        //     name: "Documentation",
-        //     link: "#documentation",
-        // },
-        // {
-        //     name: "FAQ",
-        //     link: "#faq",
-        // },
-        // {
-        //     name: "Contact Us",
-        //     link: "#contact",
-        // },
+        {
+            name: "Features",
+            link: "#features",
+        },
+        {
+            name: "Contact Us",
+            link: "/contact",
+        },
     ]
 
     return (
