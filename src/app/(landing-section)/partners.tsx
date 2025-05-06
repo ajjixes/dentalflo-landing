@@ -1,58 +1,39 @@
-import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
+import { PartnersStatic } from "@/components/ui/partners-static";
+
 const Partners = () => {
-    return (
-        <div>
-            <div className="text-center text-sm opacity-70">Trusted by Over 1,000+ Clients Worldwide</div>
-            <div className="rounded-md flex flex-col antialiased  dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
-                <InfiniteMovingCards
-                    items={partners}
-                    direction="right"
-                    speed="normal"
-                />
-            </div>
-        </div>
-    )
-}
+  return (
+    <div>
+      <div className="text-center text-sm opacity-70">
+        Trusted by Over 1,000+ Clients Worldwide
+      </div>
+      <div className="rounded-md flex flex-col antialiased dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
+        <PartnersStatic items={partners} />
+      </div>
+    </div>
+  );
+};
+
 const partners = [
-    {
-        image: "/partner-logo/partner1.png",
-        name: "Charles Dickens 1",
-    },
-    {
-        image: "/partner-logo/partner2.png",
-        name: "Charles Dickens 2",
-    },
-    {
-        image: "/partner-logo/partner3.png",   
-        name: "Charles Dickens 3", 
-    },
-    {
-        image: "/partner-logo/partner4.png",
-        name: "Charles Dickens 4",
-    },
-    {
-        image: "/partner-logo/partner5.png",
-        name: "Charles Dickens 5",
-    },
-    {
-        image: "/partner-logo/partner1.png",
-        name: "Charles Dickens 6",
-    },
-    {
-        image: "/partner-logo/partner2.png",
-        name: "Charles Dickens 7",
-    },
-    {
-        image: "/partner-logo/partner3.png",
-        name: "Charles Dickens 8",
-    },
-    {
-        image: "/partner-logo/partner4.png",
-        name: "Charles Dickens 9",
-    },
-    {
-        image: "/partner-logo/partner5.png",
-        name: "Charles Dickens 10",
-    },
+  {
+    image: "/partner-gray-logo/corepractice.svg",
+    name: "Core Practice",
+  },
+  {
+    image: "/partner-gray-logo/dental4web.svg",
+    name: "Dental4web",
+  },
+  {
+    image: "/partner-gray-logo/dental4windows.svg",
+    name: "Dental4windows",
+  },
+  {
+    image: "/partner-gray-logo/dentally.svg",
+    name: "Dentally",
+  },
+  {
+    image: "/partner-gray-logo/praktika.svg",
+    name: "Praktika",
+  },
 ];
-export default Partners
+
+export default Partners;
