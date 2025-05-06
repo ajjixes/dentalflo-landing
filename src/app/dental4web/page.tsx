@@ -46,7 +46,6 @@ export default function Home() {
                     </div>
 
                     <div className="mt-36 px-4 md:px-6 flex flex-col items-center justify-center">
-                        <div className="text-center mb-6  text-sm opacity-70">Supported by Industry Leaders</div>
                         <div className="flex gap-10 items-end">
                             <Image src="/partner-logo/Dental4Web.svg" className="w-full max-w-[10rem] lg:max-w-[15rem]" alt="Dental4Web Logo" width={100} height={100} />
                             <svg className="h-fit w-full max-w-[15rem]" viewBox="0 0 1255 119" fill="none" xmlns="http://www.w3.org/2000/svg">
