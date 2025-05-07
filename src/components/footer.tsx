@@ -83,7 +83,7 @@ const Footer = () => {
                         <div className="flex flex-col gap-1">
                             <Link href="#features" className="text-sm opacity-70 whitespace-nowrap hover:border-l-3 hover:px-1 border-primary transition-all duration-100 ease-linear">Features</Link>
                             <Link href="#faq" className="text-sm opacity-70 whitespace-nowrap hover:border-l-3 hover:px-1 border-primary transition-all duration-100 ease-linear">FAQ</Link>
-                            <Link href="/contact" className="text-sm opacity-70 whitespace-nowrap hover:border-l-3 hover:px-1 border-primary transition-all duration-100 ease-linear">Contact Us</Link>
+                            <Link href="/contact-us" className="text-sm opacity-70 whitespace-nowrap hover:border-l-3 hover:px-1 border-primary transition-all duration-100 ease-linear">Contact Us</Link>
                         </div>
                     </div>
                     <div className='flex-1'>

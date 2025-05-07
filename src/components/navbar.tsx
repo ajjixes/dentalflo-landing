@@ -97,7 +97,7 @@ export default function Navbar() {
         },
         {
             name: "Contact Us",
-            link: "/contact",
+            link: "/contact-us",
         },
     ]
 
@@ -115,7 +115,7 @@ export default function Navbar() {
                             width={30}
                             height={30}
                         />
-                        <span className="font-medium">Dentalflo AI</span>
+                        <span className="font-medium whitespace-nowrap">Dentalflo AI</span>
                     </Link>
                     <div className="hidden lg:flex col-span-2 items-center justify-center gap-3">
                         {navItems.map((item) => (

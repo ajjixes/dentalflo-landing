@@ -48,7 +48,7 @@ const Contact = () => {
                 </BlurFade> 
                 <BlurFade delay={0.3} inView direction="up">
                     <Button size="lg" className="rounded-full bg-white/20 hover:bg-white/30  mt-6" asChild>
-                        <Link href="/contact">Contact Us</Link>
+                        <Link href="/contact-us">Contact Us</Link>
                     </Button> 
                 </BlurFade>
 

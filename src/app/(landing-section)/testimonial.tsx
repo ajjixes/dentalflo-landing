@@ -42,7 +42,7 @@ const Testimonial = () => {
                     >
                         <CarouselContent>
                             <CarouselItem>
-                                <BlurFade delay={0.3} inView direction="left">
+                                <BlurFade delay={0.3} inView direction="left" className="h-full">
                                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 p-4 lg:p-6 border border-[#ffffff1a] bg-dark-primary rounded-lg h-full">
                                         <div className="rounded-lg overflow-hidden w-full">
                                             <Image src="/testimonial/smile/profile.jpg" className="h-full w-full object-cover object-top" height={500} width={500} alt="" />
@@ -93,10 +93,10 @@ const Testimonial = () => {
                                 </BlurFade>
                             </CarouselItem>
                             <CarouselItem>
-                                <BlurFade delay={0.4} inView direction="left">
+                                <BlurFade delay={0.4} inView direction="left" className="h-full">
                                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 p-4 lg:p-6 border border-[#ffffff1a] bg-dark-primary rounded-lg h-full">
                                         <div className="relative rounded-lg overflow-hidden w-full">
-                                            <div className="relative bg-blue-400 h-full">
+                                            <div className="relative h-full">
                                                 <HeroVideoDialog
                                                     animationStyle="top-in-bottom-out"
                                                     videoSrc="https://bvkcvxzvcdvtabszzkgh.supabase.co/storage/v1/object/sign/testimonial/PeninsulaSmiles.mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InN0b3JhZ2UtdXJsLXNpZ25pbmcta2V5XzFhNzcxNGRiLWUxYWQtNDEwNi1hYWJkLWUxZjFlNmQ0NmM3ZCJ9.eyJ1cmwiOiJ0ZXN0aW1vbmlhbC9QZW5pbnN1bGFTbWlsZXMubXA0IiwiaWF0IjoxNzQ2NTQ2OTk2LCJleHAiOjE5MDQyMjY5OTZ9.PRQ7WgXyuyQT7Tudfx0pySk9ic9aiLzuOGZxbfsO4Ig"
@@ -106,7 +106,7 @@ const Testimonial = () => {
                                                 />
                                             </div>
                                         </div>
-                                        <div className="flex flex-col justify-between -mt-7 lg:mt-0 h-full md:py-4">
+                                        <div className="flex flex-col justify-between h-full md:py-4">
                                             <p className="mb-10 text-lg">
                                                 Partnering with Dental Flo has been one of the best decisions we’ve made for our dental practice. Their development of a custom AI dental receptionist has completely transformed how we manage patient interactions.
                                             </p>
@@ -148,7 +148,7 @@ const Testimonial = () => {
                                 </BlurFade>
                             </CarouselItem>
                             <CarouselItem>
-                                <BlurFade delay={0.5} inView direction="left">
+                                <BlurFade delay={0.5} inView direction="left" className="h-full">
                                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 p-4 lg:p-6 border border-[#ffffff1a] bg-dark-primary rounded-lg h-full">
                                         <div className="rounded-lg overflow-hidden w-full ">
                                             <Image src="/testimonial/station-square-dental/profile.png" className="h-full w-full object-cover object-top" height={500} width={500} alt="" />
