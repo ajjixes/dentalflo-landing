@@ -5,6 +5,7 @@ import Footer from "@/components/footer";
 import { AnimatedShinyText } from "@/components/magicui/animated-shiny-text";
 import Feature from "../(landing-section)/feature";
 import Image from "next/image";
+import Contact from "../(landing-section)/contact";
 
 export default function Home() {
 
@@ -12,10 +13,6 @@ export default function Home() {
         <div className="relative w-full flex flex-col items-center overflow-hidden">
 
             <div className="pointer-events-none absolute inset-0  overflow-hidden">
-                <div className="absolute right-0 top-0 h-96 w-96 rounded-full bg-blue-500/10 blur-3xl"></div>
-                <div className="bg-purple-500/10 absolute left-0 top-1/3 h-96 w-96 rounded-full blur-3xl"></div>
-                <div className="absolute bottom-0 right-1/4 h-64 w-64 rounded-full bg-blue-400/5 blur-3xl"></div>
-
                 <div
                     className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.01)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.01)_1px,transparent_1px)] bg-[size:40px_40px]"
                 ></div>
@@ -46,7 +43,7 @@ export default function Home() {
                     </div>
 
                     <div className="mt-36 px-4 md:px-6 flex flex-col items-center justify-center">
-                        <div className="flex gap-10 items-end">
+                        <div className="flex gap-10 items-center">
                             <Image src="/partner-logo/Dental4Web.svg" className="w-full max-w-[10rem] lg:max-w-[15rem]" alt="Dental4Web Logo" width={100} height={100} />
                             <svg className="h-fit w-full max-w-[15rem]" viewBox="0 0 1255 119" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g clipPath="url(#clip0_686_337)">
@@ -72,10 +69,10 @@ export default function Home() {
                 </div>
             </div >
 
-            <div className="-mt-40 mb-40">
+            <div className="-mt-40">
                 <Feature />
             </div>
-
+            <Contact />
             <Footer />
         </div >
     );
