@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import { MailgunClient } from "@/lib/mailgun";
-import {  ContactSubmission, supabaseClient } from "@/lib/supabase";
+import { createClient } from '@supabase/supabase-js';
 
 interface ContactFormData {
   name: string;
@@ -9,6 +9,26 @@ interface ContactFormData {
   clinicDetails: string;
   message: string;
 }
+
+interface ContactSubmission {
+  name: string;
+  email: string;
+  phone_number: string;
+  clinic_details: string;
+  message: string;
+}
+
+// Create a single supabase client for interacting with your database
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
+const supabaseServiceKey = process.env.SUPABASE_SERVICE_KEY || '';
+
+// Client for server-side operations (service role with full access)
+export const supabaseAdmin = createClient(supabaseUrl, supabaseServiceKey, {
+  auth: {
+    autoRefreshToken: false,
+    persistSession: false
+  }
+});
 
 // Mailgun configuration for email sending
 const MAILGUN_CONFIG = {
@@ -42,7 +62,7 @@ async function saveToDatabase(formData: ContactFormData): Promise<{ success: boo
       message: formData.message
     };
 
-    const { error } = await supabaseClient
+    const { error } = await supabaseAdmin
       .from('contacts')
       .insert(contactSubmission)
       .select();
