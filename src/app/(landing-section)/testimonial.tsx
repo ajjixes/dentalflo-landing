@@ -45,7 +45,7 @@ const Testimonial = () => {
                                 <BlurFade delay={0.3} inView direction="left" className="h-full">
                                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 p-4 lg:p-6 border border-[#ffffff1a] bg-dark-primary rounded-lg h-full">
                                         <div className="rounded-lg overflow-hidden w-full">
-                                            <Image src="/testimonial/smile/profile.jpg" className="h-full w-full object-cover object-top" height={500} width={500} alt="" />
+                                            <Image src="/testimonial/smile/profile.png" className="h-full w-full object-cover object-top" height={500} width={500} alt="" />
                                         </div>
                                         <div className="flex flex-col justify-between">
                                             <div>

@@ -1,7 +1,9 @@
+"use client"
 import { OrbitingCircles } from '@/components/magicui/orbiting-circles'
-import { Sparkles, HeartHandshake, History, Zap, CalendarHeart, AudioWaveform, Text, Flag, Globe } from 'lucide-react'
-import React from 'react'
-import Image from 'next/image'
+import React, { useState, useEffect } from 'react'
+import { MorphingText } from '@/components/magicui/morphing-text';
+import Image from 'next/image';
+import { HyperText } from "@/components/magicui/hyper-text";
 
 const languages = [
     { name: 'Hi there' },
@@ -46,14 +48,25 @@ const languages = [
     { name: 'ഹായ് അവിടെ' }
 ];
 
-
 const Feature7 = () => {
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const [isAnimating, setIsAnimating] = useState(false);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentIndex((prev) => (prev + 1) % languages.length);
+            setIsAnimating(true);
+        }, 3000); // Change text every 3 seconds
+
+        return () => clearInterval(interval);
+    }, []);
+
     return (
-        <div className="relative flex h-[25rem] flex-col items-center justify-center overflow-hidden">
+        <div className="relative flex h-[15rem] md:h-[25rem] w-full flex-col items-center justify-center overflow-hidden">
             <div className="absolute z-10 top-0 w-full h-[3rem] bg-gradient-to-b from-white dark:from-dark-primary to-transparent"></div>
             <div className="absolute z-10 bottom-0 w-full h-[3rem] bg-gradient-to-t from-white dark:from-dark-primary to-transparent"></div>
 
-            <OrbitingCircles iconSize={40} speed={0.7} radius={300}>
+            {/* <OrbitingCircles iconSize={40} speed={0.7} radius={300}>
                 {languages.slice(0, 20).map((language) => (
                     <div className="bg-white dark:bg-muted py-1 px-3 rounded-full border whitespace-nowrap">
                         {language.name}
@@ -72,8 +85,20 @@ const Feature7 = () => {
                 <div className="w-20 aspect-square p-2 border rounded-xl">
                     <Image src="/logo.png" className='w-full' alt="logo" width={100} height={100} />
                 </div>
-            </div>
+            </div> */}
 
+            <div className="absolute z-0 w-full h-full opacity-20">
+                <Image src="/assets/wordmap.svg" className='w-full h-full object-cover object-top' alt="Map" width={100} height={100} />
+            </div>
+            {/* <MorphingText texts={languages.map((language) => language.name)} /> */}
+            <HyperText 
+                key={currentIndex}
+                animateOnHover={false}
+                startOnView={true}
+                duration={1000}
+            >
+                {languages[currentIndex].name}
+            </HyperText>
 
         </div>
     )

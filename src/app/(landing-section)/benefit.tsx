@@ -2,7 +2,7 @@ import { GridPattern } from "@/components/magicui/grid-pattern"
 import { Check, X, ChevronLeft, ChevronRight, Share, Plus, Lock, RotateCw } from "lucide-react"
 import { BlurFade } from "@/components/magicui/blur-fade"
 const goodbyeItems = [
-  "Multiply subscription pay",
+  "Multiple subscription payments",
   "Separate tools for forms, call tracking, and lead capture",
   "Multiple disconnected systems that don't talk to each other"
 ]
