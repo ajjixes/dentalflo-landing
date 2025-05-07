@@ -38,7 +38,7 @@ const Security = () => {
                         </div>
                     </div>
                     <div className="relative order-1 md:order-2 w-full max-w-sm lg:max-w-lg">
-                        <svg className="w-full" viewBox="0 0 888 764" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+                        <svg className="w-full" viewBox="0 0 730 764" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
                             <mask id="mask0_841_356" style={{ maskType: "alpha" }} maskUnits="userSpaceOnUse" x="0" y="0" width="677" height="761">
                                 <rect width="676.719" height="760.632" fill="url(#pattern0_841_356)" />
                             </mask>

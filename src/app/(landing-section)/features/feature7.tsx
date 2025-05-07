@@ -54,14 +54,14 @@ const Feature7 = () => {
             <div className="absolute z-10 bottom-0 w-full h-[3rem] bg-gradient-to-t from-white dark:from-dark-primary to-transparent"></div>
 
             <OrbitingCircles iconSize={40} speed={0.7} radius={300}>
-                {languages.slice(0, 30).map((language) => (
+                {languages.slice(0, 20).map((language) => (
                     <div className="bg-white dark:bg-muted py-1 px-3 rounded-full border whitespace-nowrap">
                         {language.name}
                     </div>
                 ))}
             </OrbitingCircles>
             <OrbitingCircles iconSize={40} radius={150} reverse speed={0.5}>
-                {languages.slice(30, 40).map((language) => (
+                {languages.slice(32, 40).map((language) => (
                     <div className="bg-white dark:bg-muted py-1 px-3 rounded-full border whitespace-nowrap">
                         {language.name}
                     </div>
