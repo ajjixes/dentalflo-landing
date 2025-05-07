@@ -49,6 +49,12 @@ export default function ContactUs() {
         body: JSON.stringify(formData),
       });
 
+      // Check if response is valid before parsing
+      const contentType = response.headers.get("content-type");
+      if (!contentType || !contentType.includes("application/json")) {
+        throw new Error("Server returned an invalid response format. Please try again.");
+      }
+
       const result = await response.json();
       
       if (result.success) {
@@ -71,7 +77,7 @@ export default function ContactUs() {
       }
     } catch (err) {
       console.error("Form submission error:", err);
-      setError("An unexpected error occurred. Please try again.");
+      setError(err instanceof Error ? err.message : "An unexpected error occurred. Please try again.");
     } finally {
       setIsSubmitting(false);
     }
