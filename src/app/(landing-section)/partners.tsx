@@ -1,14 +1,19 @@
+import { BlurFade } from "@/components/magicui/blur-fade";
 import { PartnersStatic } from "@/components/ui/partners-static";
 
 const Partners = () => {
   return (
     <div>
-      <div className="text-center text-sm opacity-70">
-        Trusted by Over 1,000+ Clients Worldwide
-      </div>
-      <div className="rounded-md flex flex-col antialiased dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
-        <PartnersStatic items={partners} />
-      </div>
+      <BlurFade delay={0.1} inView direction="up">
+        <div className="text-center text-sm opacity-70">
+          Trusted by Over 1,000+ Clients Worldwide
+        </div>
+      </BlurFade>
+      <BlurFade delay={0.2} inView direction="up">
+        <div className="rounded-md flex flex-col antialiased dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
+          <PartnersStatic items={partners} />
+        </div>
+      </BlurFade>
     </div>
   );
 };

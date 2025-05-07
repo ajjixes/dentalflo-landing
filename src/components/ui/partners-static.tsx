@@ -18,8 +18,8 @@ export const PartnersStatic = ({
   };
 
   return (
-    <div className={cn("relative z-20 max-w-6xl overflow-hidden", className)}>
-      <ul className="flex w-max min-w-full shrink-0 flex-nowrap gap-10 py-4 items-center">
+    <div className={cn("relative z-20 max-w-6xl overflow-hidden px-4 md:px-6", className)}>
+      <ul className="flex justify-center w-full shrink-0 flex-wrap lg:flex-nowrap gap-10 py-4 scale-80 lg:scale-100 items-center">
         {items.map((item, idx) => {
           const imageClass = getImageClass(item.name);
           return (

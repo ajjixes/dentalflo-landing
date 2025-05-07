@@ -1,26 +1,32 @@
-import { AudioWaveform, LayoutPanelTop, TextSelect, Webhook, BotMessageSquare, Workflow } from "lucide-react"
+import { AudioWaveform, LayoutPanelTop, TextSelect, Webhook, BotMessageSquare, Workflow, Languages } from "lucide-react"
 import Feature1 from "./features/feature1"
 import Feature2 from "./features/feature2"
 import Feature3 from "./features/feature3"
 import Feature4 from "./features/feature4"
 import Feature5 from "./features/feature5"
 import Feature6 from "./features/feature6"
+import Feature7 from "./features/feature7"
+import { BlurFade } from "@/components/magicui/blur-fade"
 
 const Feature = () => {
     return (
         <div className="relative flex flex-col items-center justify-center mt-40 max-w-6xl w-full mx-auto p-4 md:p-6">
             <div className="p-4 md:p-6">
-                <div className="text-2xl md:text-3xl lg:text-4xl max-w-3xl text-center">
-                    All-in-One AI for Patient Communication
-                </div>
-                <div className="text-sm md:text-base max-w-3xl text-center mt-4 opacity-70">
-                    Free your team from admin work. Automate calls, bookings, and follow-ups,
-                </div>
+                <BlurFade delay={0.1} inView direction="up">
+                    <div className="text-2xl md:text-3xl lg:text-4xl max-w-3xl text-center">
+                        All-in-One AI for Patient Communication
+                    </div>
+                </BlurFade>
+                <BlurFade delay={0.2} inView direction="up">
+                    <div className="text-sm md:text-base max-w-3xl text-center mt-4 opacity-70">
+                        Free your team from admin work. Automate calls, bookings, and follow-ups,
+                    </div>
+                </BlurFade>
 
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 w-full mt-16">
-                <div className="lg:col-span-2 bg-white dark:bg-dark-primary border rounded-xl overflow-hidden">
+                <BlurFade delay={0.1} inView direction="up" className="lg:col-span-2 bg-white dark:bg-dark-primary border rounded-xl overflow-hidden">
                     <div className=" p-4 md:p-6 ">
                         <div className="flex items-center gap-2 mb-2">
                             <Workflow />
@@ -32,9 +38,9 @@ const Feature = () => {
                     <div className="w-full">
                         <Feature6 />
                     </div>
-                </div>
+                </BlurFade>
 
-                <div className="overflow-hidden flex flex-col justify-between bg-white dark:bg-dark-primary border  rounded-xl">
+                <BlurFade delay={0.1} inView direction="up" className="overflow-hidden flex flex-col justify-between bg-white dark:bg-dark-primary border  rounded-xl">
                     <div className="p-4 md:p-6">
                         <div className="flex items-center gap-2 mb-2">
                             <AudioWaveform />
@@ -46,9 +52,9 @@ const Feature = () => {
                     <div className="relative h-[10rem]  md:h-[18rem] lg:h-[15rem] xl:h-[18rem] w-full">
                         <Feature1 />
                     </div>
-                </div>
+                </BlurFade>
 
-                <div className="bg-white dark:bg-dark-primary border rounded-xl">
+                <BlurFade delay={0.1} inView direction="up" className="bg-white dark:bg-dark-primary border rounded-xl">
                     <div className="p-4 md:p-6">
                         <div className="flex items-center gap-2 mb-2">
                             <Webhook />
@@ -58,9 +64,9 @@ const Feature = () => {
                     </div>
 
                     <Feature5 />
-                </div>
+                </BlurFade>
 
-                <div className="lg:col-span-2 bg-white dark:bg-dark-primary border rounded-xl ">
+                <BlurFade delay={0.1} inView direction="up" className="lg:col-span-2 bg-white dark:bg-dark-primary border rounded-xl ">
                     <div className=" p-4 md:p-6">
                         <div className="flex items-center gap-2 mb-2">
                             <LayoutPanelTop />
@@ -72,9 +78,9 @@ const Feature = () => {
                     <div className="h-[10rem] md:h-[15rem] lg:h-[25rem] w-full overflow-hidden">
                         <Feature2 />
                     </div>
-                </div>
+                </BlurFade>
 
-                <div className="overflow-hidden bg-white dark:bg-dark-primary border p-4 md:p-6 rounded-xl">
+                <BlurFade delay={0.1} inView direction="up" className="overflow-hidden bg-white dark:bg-dark-primary border p-4 md:p-6 rounded-xl">
                     <div className="flex items-center gap-2 mb-2">
                         <TextSelect />
                         <div className="text-lg md:text-xl">Call Transcription & Summaries</div>
@@ -84,9 +90,9 @@ const Feature = () => {
                     <div className="h-full p-4 pb-10 flex items-center">
                         <Feature3 />
                     </div>
-                </div>
-                
-                <div className="bg-white dark:bg-dark-primary border rounded-xl overflow-hidden ">
+                </BlurFade>
+
+                <BlurFade delay={0.1} inView direction="up" className="bg-white dark:bg-dark-primary border rounded-xl overflow-hidden ">
                     <div className="p-4 md:p-6">
                         <div className="flex items-center gap-2 mb-2">
                             <BotMessageSquare />
@@ -98,8 +104,19 @@ const Feature = () => {
                     <div className="h-full pb-4 flex justify-center">
                         <Feature4 />
                     </div>
-                </div>
+                </BlurFade>
+                
+                <BlurFade delay={0.1} inView direction="up" className="lg:col-span-2 bg-white dark:bg-dark-primary border rounded-xl ">
+                    <div className=" p-4 md:p-6">
+                        <div className="flex items-center gap-2 mb-2">
+                            <Languages />
+                            <div className="text-lg md:text-xl">Multilingual AI Communication</div>
+                        </div>
+                        <p className="text-sm text-foreground/70">Speak and support patients in 20+ languages with instant detection and translation.</p>
+                    </div>
 
+                    <Feature7 />
+                </BlurFade>
             </div>
         </div>
     )
