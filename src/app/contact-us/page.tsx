@@ -6,7 +6,14 @@ import { Button } from "@/components/ui/button";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import { motion } from "framer-motion";
-import { submitContactForm, ContactFormData } from "@/app/actions/contact";
+
+interface ContactFormData {
+  name: string;
+  phone: string;
+  email: string;
+  clinicDetails: string;
+  message: string;
+}
 
 export default function ContactUs() {
   const [formData, setFormData] = useState<ContactFormData>({
@@ -34,13 +41,21 @@ export default function ContactUs() {
     setStatusMessage(null);
     
     try {
-      const result = await submitContactForm(formData);
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
       
       if (result.success) {
         setSubmitted(true);
         
         // Handle partial success - db saved but email failed
-        if (result.dbSuccess && !result.emailSuccess && result.message) {
+        if (result.dbSuccess === false && result.message) {
           setStatusMessage(result.message);
         }
         

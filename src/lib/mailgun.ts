@@ -35,6 +35,8 @@ interface EmailMessage {
     cc?: string | string[];
     /** Blind carbon copy recipient(s) */
     bcc?: string | string[];
+    /** Reply-To header */
+    'h:Reply-To'?: string;
     /** File attachments to include with the email */
     attachments?: EmailAttachment[];
 }
@@ -110,6 +112,9 @@ export class MailgunClient {
         // Add optional fields
         if (message.text) formData.append('text', message.text);
         if (message.html) formData.append('html', message.html);
+        
+        // Add Reply-To header if provided
+        if (message['h:Reply-To']) formData.append('h:Reply-To', message['h:Reply-To']);
 
         // Handle CC recipients
         if (message.cc) {

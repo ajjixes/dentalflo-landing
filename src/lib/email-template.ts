@@ -20,171 +20,131 @@ export const createContactEmailTemplate = (formData: {
       <title>New Contact Form Submission</title>
       <style>
         body {
-          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-          line-height: 1.5;
-          color: #1a2030;
-          max-width: 600px;
-          margin: 0;
-          padding: 0;
-          -webkit-font-smoothing: antialiased;
-          background-color: #f5f6fa;
-        }
-        .wrapper {
-          width: 100%;
-          background-color: #f5f6fa;
+          font-family: 'Segoe UI', Arial, sans-serif;
+          background: #f7f7fa;
+          color: #222;
           margin: 0;
           padding: 0;
         }
-        .header {
-          padding: 25px 0;
-          background-color: #504cee;
+        .container {
+          max-width: 450px;
+          margin: 32px auto;
+          background: #fff;
+          border-radius: 10px;
+          overflow: hidden;
+          box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+        .header-block {
+          background: linear-gradient(120deg, #23243a 60%, #1a3b8b 100%);
+          color: #fff;
           text-align: center;
+          padding: 40px 20px 32px 20px;
         }
-        .logo {
-          width: 36px;
-          height: 36px;
-          background-color: #ffffff;
-          border-radius: 8px;
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          margin-bottom: 10px;
-          color: #504cee;
-          font-weight: bold;
-          font-size: 18px;
+        .header-block h1 {
+          margin: 0 0 8px 0;
+          font-size: 1.6rem;
+          font-weight: 600;
         }
-        .header-content {
-          color: white;
+        .header-block p {
           margin: 0;
-          padding: 0;
+          font-size: 1.1rem;
+          font-weight: 400;
         }
-        .header h1 {
-          margin: 0;
-          padding: 0;
-          font-size: 22px;
-          font-weight: 500;
+        .content {
+          padding: 32px 24px 24px 24px;
         }
-        .header p {
-          margin: 5px 0 0;
-          font-size: 14px;
-          opacity: 0.9;
-        }
-        .section {
-          padding: 24px 30px;
-          background-color: #ffffff;
-          border-radius: 0 0 4px 4px;
-          box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-        }
-        .field-row {
+        .info-block {
+          background: #f3f4f6;
+          border-radius: 6px;
+          padding: 16px 20px;
           margin-bottom: 18px;
         }
-        .label {
+        .info-label {
           font-size: 12px;
-          text-transform: uppercase;
           color: #6b7280;
-          margin-bottom: 5px;
+          text-transform: uppercase;
+          margin-bottom: 2px;
           letter-spacing: 0.5px;
         }
-        .value {
+        .info-value {
           font-size: 15px;
-          margin-top: 0;
-          margin-bottom: 0;
-          color: #1a2030;
+          color: #23243a;
+          font-weight: 500;
         }
         .message-block {
-          margin-top: 24px;
-          border-top: 1px solid #e5e7eb;
-          padding-top: 20px;
+          margin: 24px 0 0 0;
         }
-        .message-content {
-          padding: 12px 15px;
-          background-color: #f5f6fa;
-          border-left: 3px solid #504cee;
-          margin-top: 5px;
-          color: #374151;
-          font-size: 14px;
-          border-radius: 0 4px 4px 0;
-        }
-        .footer {
-          padding: 15px;
-          background-color: #f5f6fa;
+        .message-label {
           font-size: 12px;
           color: #6b7280;
-          text-align: center;
-          border-top: 1px solid #e5e7eb;
+          text-transform: uppercase;
+          margin-bottom: 2px;
         }
-        a {
-          color: #504cee;
+        .message-content {
+          background: #f7f7fa;
+          border-radius: 6px;
+          padding: 14px 16px;
+          color: #374151;
+          font-size: 14px;
+          margin-top: 4px;
+        }
+        .cta {
+          display: block;
+          width: fit-content;
+          margin: 32px auto 0 auto;
+          background: #2563eb;
+          color: #fff !important;
           text-decoration: none;
+          font-weight: 600;
+          padding: 12px 32px;
+          border-radius: 6px;
+          font-size: 15px;
+          box-shadow: 0 2px 6px rgba(37,99,235,0.08);
+          transition: background 0.2s;
         }
-        .star-icon {
-          display: inline-block;
-          margin-right: 5px;
-          color: #ffe234;
+        .cta:hover {
+          background: #1d4ed8;
         }
-        .ai-badge {
-          display: inline-block;
-          background-color: rgba(80, 76, 238, 0.1);
-          color: #504cee;
-          padding: 3px 8px;
-          border-radius: 12px;
-          font-size: 11px;
-          margin: 15px auto;
-        }
-        @media only screen and (max-width: 480px) {
-          .section {
-            padding: 20px;
-          }
-          .footer {
-            padding: 15px;
-          }
+        .footer {
+          text-align: center;
+          color: #a1a1aa;
+          font-size: 12px;
+          padding: 18px 0 10px 0;
         }
       </style>
     </head>
     <body>
-      <div class="wrapper">
-        <div class="header">
-          <div class="header-content">
-            <div class="logo">D</div>
-            <h1>New Contact Form Submission</h1>
-            <p>A potential client has reached out via your website</p>
-          </div>
+      <div class="container">
+        <div class="header-block">
+          <h1>New Contact Form Submission</h1>
+          <p>A potential client has reached out via your website</p>
         </div>
-        
-        <div class="section">
-          <div class="field-row">
-            <div class="label">Full Name</div>
-            <div class="value">${formData.name}</div>
+        <div class="content">
+          <div class="info-block">
+            <div class="info-label">Full Name</div>
+            <div class="info-value">${formData.name}</div>
           </div>
-          
-          <div class="field-row">
-            <div class="label">Phone Number</div>
-            <div class="value">${formData.phone}</div>
+          <div class="info-block">
+            <div class="info-label">Phone Number</div>
+            <div class="info-value">${formData.phone}</div>
           </div>
-          
-          <div class="field-row">
-            <div class="label">Email Address</div>
-            <div class="value"><a href="mailto:${formData.email}">${formData.email}</a></div>
+          <div class="info-block">
+            <div class="info-label">Email Address</div>
+            <div class="info-value"><a href="mailto:${formData.email}" style="color:#2563eb;text-decoration:none;">${formData.email}</a></div>
           </div>
-          
-          <div class="field-row">
-            <div class="label">Clinic Details</div>
-            <div class="value">${formData.clinicDetails}</div>
+          <div class="info-block">
+            <div class="info-label">Clinic Details</div>
+            <div class="info-value">${formData.clinicDetails}</div>
           </div>
-          
           <div class="message-block">
-            <div class="label">Message</div>
+            <div class="message-label">Message</div>
             <div class="message-content">${formData.message}</div>
           </div>
-          
-          <div style="text-align: center;">
-            <div class="ai-badge"><span class="star-icon">✨</span>AI-Powered Form</div>
-          </div>
+          <a href="mailto:${formData.email}?subject=Re: DentalFlo AI Inquiry&body=Hello ${formData.name},%0D%0A%0D%0AThank you for contacting DentalFlo AI.%0D%0A%0D%0A" class="cta">Reply to this Lead</a>
         </div>
-        
         <div class="footer">
-          <p>This message was sent via the DentalFlo AI contact form</p>
-          <p>You can reply directly to this email to respond to ${formData.name}</p>
+          This message was sent via the DentalFlo AI contact form.<br>
+          You can reply directly to this email to respond to ${formData.name}.
         </div>
       </div>
     </body>
