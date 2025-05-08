@@ -6,7 +6,7 @@ const Partners = () => {
     <div>
       <BlurFade delay={0.1} inView direction="up">
         <div className="text-center text-sm opacity-70">
-          Trusted by Over 1,000+ Clients Worldwide
+          Trusted by our partners
         </div>
       </BlurFade>
       <BlurFade delay={0.2} inView direction="up">
