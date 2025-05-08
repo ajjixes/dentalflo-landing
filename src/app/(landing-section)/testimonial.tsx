@@ -27,9 +27,9 @@ const Testimonial = () => {
                         Trusted by Clinics Across Australia
                     </div>
                 </BlurFade>
-                <BlurFade delay={0.2} inView direction="up">
+                {/* <BlurFade delay={0.2} inView direction="up">
                     <div className="text-sm md:text-base max-w-3xl text-center mt-4 opacity-70">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, impedit.</div>
-                </BlurFade>
+                </BlurFade> */}
                 <div className="relative mt-20">
                     <Carousel
                     // plugins={[plugin.current]}
