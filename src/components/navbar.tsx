@@ -131,7 +131,7 @@ export default function Navbar() {
                     <div className="hidden lg:flex items-center justify-end w-full gap-2">
                         <ModeToggle className={`${isInLeaderSection ? 'bg-dark-primary text-white border-dark-border hover:bg-dark-secondary hover:text-white' : ''}`} />
                         <a className="bg-primary h-9 px-4 py-2 inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium text-white hover:bg-primary/90"
-                            target="_blank" rel="noopener noreferrer" href="https://cal.com/dentalfloai.com.au">
+                            target="_blank" rel="noopener noreferrer" href="https://calendly.com/dentalfloai/discoverycall?month=2025-05">
                             Book a call
                         </a>
                     </div>
@@ -166,7 +166,7 @@ export default function Navbar() {
                     <div className="flex items-center justify-end w-full gap-2 mt-3">
                         <ModeToggle className={`${isInLeaderSection ? 'bg-dark-primary text-white border-dark-border hover:bg-dark-secondary hover:text-white' : ''}`} />
                         <a className="flex-1 bg-primary h-9 px-4 py-2 inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium text-white hover:bg-primary/90"
-                            target="_blank" rel="noopener noreferrer" href="https://cal.com/dentalfloai.com.au">
+                            target="_blank" rel="noopener noreferrer" href="https://calendly.com/dentalfloai/discoverycall?month=2025-05">
                             Book a call
                         </a>
                     </div>

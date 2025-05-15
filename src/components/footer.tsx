@@ -63,21 +63,34 @@ const Footer = () => {
                         <ChevronUp />
                     </div>
                 </div>
-                <div className="flex flex-wrap gap-10 w-full">
-                    <div className='flex-1'>
-                        <div className="mb-1">Contact Number</div>
-                        <div className="text-sm opacity-70">
-                            0489261411
+                <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 md:gap-10 w-full">
+                    <div className='col-span-2'>
+                        <div className="mb-1">Location</div>
+                        <div className="text-sm">
+                            Gold Coast Office
                         </div>
-
-                        <div className="mb-1 mt-6">Gold Coast Office</div>
-
                         <div className="text-sm opacity-70">
                             Suite 311, 34 Glenferrie Drive,
                             Robina, Gold Coast, Qld 4226
                         </div>
+                        
+                        <div className="mb-1 mt-6">Contact Number</div>
+                        <div className="text-sm">
+                            Direct line - Talk to human Tel
+                        </div>
+                        <div className="text-sm opacity-70">
+                            0721131176
+                        </div>
+                        <div className="text-sm mt-2">
+                            Book with Chloe AI
+                        </div>
+                        <div className="text-sm opacity-70">
+                            0489261411
+                        </div>
+
+                      
                     </div>
-                    <div className='flex-1'>
+                    <div className=''>
                         <div className="mb-4">Navigation</div>
 
                         <div className="flex flex-col gap-1">
@@ -86,7 +99,7 @@ const Footer = () => {
                             <Link href="/contact-us" className="text-sm opacity-70 whitespace-nowrap hover:border-l-3 hover:px-1 border-primary transition-all duration-100 ease-linear">Contact Us</Link>
                         </div>
                     </div>
-                    <div className='flex-1'>
+                    <div className=''>
                         <div className="mb-4">Legal</div>
 
                         <div className="flex flex-col gap-1">
@@ -94,7 +107,7 @@ const Footer = () => {
                             <Link href="/privacy-policy" className="text-sm opacity-70 whitespace-nowrap hover:border-l-3 hover:px-1 border-primary transition-all duration-100 ease-linear">Privacy Policy</Link>
                         </div>
                     </div>
-                    <div className='flex-1'>
+                    <div className=''>
                         <div className="mb-4">Social</div>
 
                         <div className="flex flex-col gap-1">
@@ -103,7 +116,7 @@ const Footer = () => {
                             <a href="https://www.linkedin.com/company/dentalflo-ai/" target="_blank" rel="noopener noreferrer" className="text-sm opacity-70 whitespace-nowrap hover:border-l-3 hover:px-1 border-primary transition-all duration-100 ease-linear">linkedin</a>
                         </div>
                     </div>
-                    <div className='flex-1'>
+                    <div className=''>
                         <div className="mb-4">Compliances</div>
 
                         <div className="space-y-1">
